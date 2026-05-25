@@ -1,0 +1,16 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9c2ebe6d42034075aa0be22bea86c639, type: 3}
+  m_Name: ItemConfigDatabase
+  m_EditorClassIdentifier: Riftcore::Riftcore.Gameplay.InventoryManagement.Data.ItemConfigDatabase
+  <Items>k__BackingField:
+  - {fileID: 11400000, guid: 40adb4b2f046ebc4682f74dcac9f057b, type: 2}

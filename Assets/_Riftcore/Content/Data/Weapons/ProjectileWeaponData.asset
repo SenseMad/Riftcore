@@ -1,0 +1,32 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 95bd2f564d24486d96b965cfc05b7f80, type: 3}
+  m_Name: ProjectileWeaponData
+  m_EditorClassIdentifier: Riftcore::Riftcore.Gameplay.WeaponManagement.ProjectileWeaponData
+  <ItemData>k__BackingField: {fileID: 11400000, guid: 40adb4b2f046ebc4682f74dcac9f057b, type: 2}
+  <AttackRange>k__BackingField: 25
+  <AttackPerMinutes>k__BackingField: 120
+  <CombatStatistics>k__BackingField:
+    <Damage>k__BackingField: 1
+    <AttackSpeed>k__BackingField: 0
+    <CritChance>k__BackingField: 0
+    <CritDamage>k__BackingField: 0
+  <ProjectileStatistics>k__BackingField:
+    <ProjectileCount>k__BackingField: 1
+    <ProjectileSize>k__BackingField: 1
+    <ProjectileSpeed>k__BackingField: 25
+    <ProjectileFiringRange>k__BackingField: 25
+    <ProjectileBounceCount>k__BackingField: 0
+    <ProjectilePenetration>k__BackingField: 0
+    <Duration>k__BackingField: 5
+  <ProjectilePrefab>k__BackingField: {fileID: 3157471800221364612, guid: 60c5cf5bd55d5c04fbbc8eac28779ed3, type: 3}
+  <ProjectileMovementFactory>k__BackingField: {fileID: 11400000, guid: f00fcbef18e2a9e458f04d88d9ae8d31, type: 2}

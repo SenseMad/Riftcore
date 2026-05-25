@@ -1,0 +1,24 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6c997080626f4cc5a67a53afea3de5dc, type: 3}
+  m_Name: EnemyData
+  m_EditorClassIdentifier: Riftcore::Riftcore.Gameplay.EnemyManagement.Configurations.EnemyData
+  <EnemyPrefab>k__BackingField: {fileID: 6242798162498209938, guid: f09e48b40828916479211ac980b5a1dd, type: 3}
+  <SpeedWalking>k__BackingField: 5
+  <Acceleration>k__BackingField: 25
+  <AttackRange>k__BackingField: 0
+  <AttackSpeed>k__BackingField: 0
+  <Damage>k__BackingField: 0
+  <MaxHealth>k__BackingField: 0
+  <ExperiencePickupPrefab>k__BackingField: {fileID: 7472832686185607173, guid: 46a7a32d921f30543ac6a032f76e0956, type: 3}
+  <ExperienceAmount>k__BackingField: 50
+  <PickupDropEntries>k__BackingField: []

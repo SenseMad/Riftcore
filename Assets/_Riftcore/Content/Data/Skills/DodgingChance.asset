@@ -1,0 +1,31 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: af68b82b82ac4d7194c77763d2fdc226, type: 3}
+  m_Name: DodgingChance
+  m_EditorClassIdentifier: Riftcore::Riftcore.Gameplay.SkillManagement.Data.SkillData
+  <StatType>k__BackingField: 15
+  <StatOperation>k__BackingField: 0
+  <Name>k__BackingField: "\u0423\u043A\u043B\u043E\u043D\u0435\u043D\u0438\u0435"
+  <Description>k__BackingField: 
+  <Icon>k__BackingField: {fileID: 0}
+  <IsPercentValue>k__BackingField: 0
+  <RarityValues>k__BackingField:
+  - <SkillRarity>k__BackingField: 1
+    <Value>k__BackingField: 100
+  - <SkillRarity>k__BackingField: 2
+    <Value>k__BackingField: 75
+  - <SkillRarity>k__BackingField: 3
+    <Value>k__BackingField: 50
+  - <SkillRarity>k__BackingField: 4
+    <Value>k__BackingField: 25
+  - <SkillRarity>k__BackingField: 5
+    <Value>k__BackingField: 5
