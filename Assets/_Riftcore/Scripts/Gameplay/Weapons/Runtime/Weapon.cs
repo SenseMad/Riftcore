@@ -1,9 +1,6 @@
 using System.Collections.Generic;
-using Riftcore.Gameplay.Enemies;
 using Riftcore.Gameplay.Enemies.Core;
-using Riftcore.Gameplay.Players;
 using Riftcore.Gameplay.Players.Core;
-using Riftcore.Gameplay.Skills;
 using Riftcore.Gameplay.Skills.Stats;
 using Riftcore.Gameplay.Stats;
 using Riftcore.Gameplay.Weapons.Data;
@@ -33,7 +30,9 @@ namespace Riftcore.Gameplay.Weapons.Runtime
 
             CombatStatistics = new CombatStatistics(_weaponData.CombatStatistics);
 
-            _attackCooldown = 60f / _weaponData.AttackPerMinutes;
+            float attackPerMinutes = _weaponData.AttackPerMinutes * _weaponData.CombatStatistics.AttackSpeed 
+                                                                  * _player.GameStatistics.CombatStatistics.AttackSpeed;
+            _attackCooldown = 60f / attackPerMinutes;
         }
         
         public override void Tick()
@@ -67,11 +66,13 @@ namespace Riftcore.Gameplay.Weapons.Runtime
         {
             float baseDamage = CombatStatistics.Damage * _player.GameStatistics.CombatStatistics.Damage;
             float critChance = CombatStatistics.CritChance + _player.GameStatistics.CombatStatistics.CritChance;
-            float critDamage = CombatStatistics.CritDamage + _player.GameStatistics.CombatStatistics.CritDamage;
+            float critDamage = CombatStatistics.CritMultiplier + _player.GameStatistics.CombatStatistics.CritMultiplier;
             
             isCritical = Random.value < critChance / 100f;
             
-            float finalDamage = isCritical ? baseDamage + critDamage : baseDamage;
+            float finalDamage = baseDamage;
+            if (isCritical)
+                finalDamage *= critDamage / 100f;
 
             return Mathf.CeilToInt(finalDamage);
         }

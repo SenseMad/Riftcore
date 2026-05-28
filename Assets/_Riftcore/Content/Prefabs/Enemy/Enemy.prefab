@@ -1,5 +1,73 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
+--- !u!1 &2739112931808885974
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 2827996721317009612}
+  - component: {fileID: 2974854057699952099}
+  - component: {fileID: 6065324098002470020}
+  m_Layer: 8
+  m_Name: EnemyTouchDamage
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &2827996721317009612
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2739112931808885974}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 5901620138022024040}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &2974854057699952099
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2739112931808885974}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: da0d13c7ae894b7a9491631397241af5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Riftcore::Riftcore.Gameplay.Enemies.Attacker.EnemyTouchDamage
+--- !u!136 &6065324098002470020
+CapsuleCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2739112931808885974}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 1
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Radius: 0.55
+  m_Height: 2.1
+  m_Direction: 1
+  m_Center: {x: 0, y: 0, z: 0}
 --- !u!1 &3529370421109037932
 GameObject:
   m_ObjectHideFlags: 0
@@ -99,9 +167,12 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 5901620138022024040}
-  - component: {fileID: 6242798162498209938}
   - component: {fileID: 507287813190770542}
   - component: {fileID: 5801356194804834914}
+  - component: {fileID: 6242798162498209938}
+  - component: {fileID: 6351713033602600621}
+  - component: {fileID: 4715488412341893847}
+  - component: {fileID: 6088939309799709643}
   m_Layer: 8
   m_Name: Enemy
   m_TagString: Untagged
@@ -122,22 +193,10 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
+  - {fileID: 2827996721317009612}
   - {fileID: 1353956507538964940}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &6242798162498209938
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 9052152434052516783}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 084937fdd8604a60a43768aa9ab10943, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Riftcore::Riftcore.Gameplay.EnemyManagement.Enemy
-  _experiencePickup: {fileID: 7472832686185607173, guid: 46a7a32d921f30543ac6a032f76e0956, type: 3}
 --- !u!136 &507287813190770542
 CapsuleCollider:
   m_ObjectHideFlags: 0
@@ -188,3 +247,56 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 80
   m_CollisionDetection: 0
+--- !u!114 &6242798162498209938
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 9052152434052516783}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 084937fdd8604a60a43768aa9ab10943, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Riftcore::Riftcore.Gameplay.EnemyManagement.Enemy
+--- !u!114 &6351713033602600621
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 9052152434052516783}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 767a4affc43243f6a85763fdae84e088, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Riftcore::Riftcore.Gameplay.HealthSystem.Health
+  _maxHealth: 100
+--- !u!114 &4715488412341893847
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 9052152434052516783}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c6c303b8ce004d68a0f943bd5b28471e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Riftcore::Riftcore.Gameplay.HealthSystem.Damageable
+--- !u!114 &6088939309799709643
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 9052152434052516783}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 146e5b0f3ee749fd863cd9f337092a5f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Riftcore::Riftcore.Gameplay.HitFlash
+  _enabled: 1
+  _flashColor: {r: 1, g: 1, b: 1, a: 1}
+  _flashCount: 3
+  _totalDuration: 0.2

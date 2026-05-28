@@ -1,5 +1,4 @@
 using System;
-using Riftcore.Gameplay.Skills;
 using Riftcore.Gameplay.Skills.Stats;
 using UnityEngine;
 
@@ -8,17 +7,17 @@ namespace Riftcore.Gameplay.Stats
     [Serializable]
     public sealed class CombatStatistics
     {
-        [field: SerializeField, Min(1)] public float Damage { get; set; } // 1.0x
-        [field: SerializeField, Min(100)] public float AttackSpeed { get; set; } // 100%
+        [field: SerializeField, Min(1)] public float Damage { get; set; } = 1.0f; // 1.0x
+        [field: SerializeField, Min(1)] public float AttackSpeed { get; set; } = 1.0f; // 1.0x
         [field: SerializeField, Range(0, 100)] public float CritChance { get; set; } // 0-100%
-        [field: SerializeField, Min(0)] public float CritDamage { get; set; } // 1.0x
+        [field: SerializeField, Min(1)] public float CritMultiplier { get; set; } = 1.0f; // 1.0x
         
         public CombatStatistics(CombatStatistics combatStatistics)
         {
             Damage = combatStatistics.Damage;
             AttackSpeed = combatStatistics.AttackSpeed;
             CritChance = combatStatistics.CritChance;
-            CritDamage = combatStatistics.CritDamage;
+            CritMultiplier = combatStatistics.CritMultiplier;
         }
         
         public void ApplyModifier(StatModifierData statModifierData)
@@ -38,7 +37,7 @@ namespace Riftcore.Gameplay.Stats
                     break;
                 
                 case StatType.CritDamage:
-                    CritDamage = statModifierData.Apply(CritDamage);
+                    CritMultiplier = statModifierData.Apply(CritMultiplier);
                     break;
             }
         }
@@ -62,7 +61,7 @@ namespace Riftcore.Gameplay.Stats
                     return true;
                 
                 case StatType.CritDamage:
-                    value = CritDamage;
+                    value = CritMultiplier;
                     return true;
                 
                 default:

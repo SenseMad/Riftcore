@@ -1,7 +1,6 @@
-using Riftcore.Gameplay.Effects;
 using Riftcore.Gameplay.Effects.Core;
-using Riftcore.Gameplay.Enemies;
 using Riftcore.Gameplay.Enemies.Core;
+using Riftcore.Gameplay.HealthSystem;
 using Riftcore.Gameplay.Projectiles.HitHandling.Interfaces;
 using Riftcore.Gameplay.Projectiles.Lifetime.Interfaces;
 using Riftcore.Gameplay.Projectiles.Movement.Interfaces;
@@ -15,11 +14,13 @@ namespace Riftcore.Gameplay.Projectiles.Core
 {
     public sealed class Projectile : PoolItem, IPoolable
     {
-        [SerializeField] private HitEffect _hitEffectPrefab;
+        [SerializeField] private Effect _hitEffectPrefab;
 
         [Inject] private readonly EffectPool _effectPool;
         
         private ProjectileManager _projectileManager;
+
+        private ProjectileContext _projectileContext;
         
         private IProjectileMovement _projectileMovement;
         private IProjectileHitHandler _projectileHitHandler;
@@ -47,6 +48,8 @@ namespace Riftcore.Gameplay.Projectiles.Core
         public void Initialize(ProjectileContext projectileContext, ProjectileComponents projectileComponents, EnemyGrid enemyGrid, 
             ProjectileManager projectileManager)
         {
+            _projectileContext = projectileContext;
+            
             _projectileMovement = projectileComponents.ProjectileMovement;
             _projectileHitHandler = projectileComponents.ProjectileHitHandler;
             _projectileLifetime = projectileComponents.ProjectileLifetime;
@@ -100,7 +103,7 @@ namespace Riftcore.Gameplay.Projectiles.Core
             _projectileManager.Unregister(this);
         }
         
-        private void UseHitEffect(Collider collider)
+        private void UseHitEffect()
         {
             if (_hitEffectPrefab == null)
                 return;
@@ -114,12 +117,15 @@ namespace Riftcore.Gameplay.Projectiles.Core
             if (!_active)
                 return;
             
-            if (!other.TryGetComponent(out Enemy enemy))
+            if (_ownerCollider != null && other.transform.root.gameObject == _ownerCollider.gameObject)
                 return;
             
-            UseHitEffect(other);
-
-            _projectileHitHandler.OnHit(enemy);
+            if (!other.TryGetComponent(out IDamageable damageable))
+                return;
+            
+            UseHitEffect();
+            
+            _projectileHitHandler.OnHit(damageable, other);
         }
     }
 }

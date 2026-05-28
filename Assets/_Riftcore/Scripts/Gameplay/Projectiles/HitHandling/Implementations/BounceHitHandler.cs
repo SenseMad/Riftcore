@@ -1,6 +1,7 @@
 using System.Collections.Generic;
 using Riftcore.Gameplay.Enemies;
 using Riftcore.Gameplay.Enemies.Core;
+using Riftcore.Gameplay.HealthSystem;
 using Riftcore.Gameplay.Projectiles.Core;
 using Riftcore.Gameplay.Projectiles.HitHandling.Interfaces;
 using Riftcore.World.Grid;
@@ -31,8 +32,18 @@ namespace Riftcore.Gameplay.Projectiles.HitHandling.Implementations
             _hitEnemies.Clear();
         }
 
-        public void OnHit(Enemy enemy)
+        public void OnHit(IDamageable damageable, Collider hitCollider)
         {
+            if (damageable == null)
+                return;
+
+            if (!hitCollider.TryGetComponent(out Enemy enemy))
+            {
+                damageable.TakeDamage(_projectileContext.Damage);
+                _projectile.Die();
+                return;
+            }
+            
             if (!_hitEnemies.Add(enemy))
                 return;
             

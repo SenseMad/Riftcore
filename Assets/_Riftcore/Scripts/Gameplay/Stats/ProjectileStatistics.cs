@@ -1,5 +1,4 @@
 using System;
-using Riftcore.Gameplay.Skills;
 using Riftcore.Gameplay.Skills.Stats;
 using UnityEngine;
 
@@ -9,12 +8,12 @@ namespace Riftcore.Gameplay.Stats
     public sealed class ProjectileStatistics
     {
         [field: SerializeField, Min(0)] public float ProjectileCount { get; set; } // 0 - ...
-        [field: SerializeField, Min(1)] public float ProjectileSize { get; set; } // 1.0x
-        [field: SerializeField, Min(1)] public float ProjectileSpeed { get; set; } // 1.0x
+        [field: SerializeField, Min(1)] public float ProjectileSize { get; set; } = 1.0f; // 1.0x
+        [field: SerializeField, Min(1)] public float ProjectileSpeed { get; set; } = 1.0f; // 1.0x
         [field: SerializeField, Min(0)] public float ProjectileFiringRange { get; set; } // 0 - ...
         [field: SerializeField, Min(0)] public float ProjectileBounceCount { get; set; } // 0 - ...
         [field: SerializeField, Min(0)] public float ProjectilePenetration { get; set; } // 0 - ...
-        [field: SerializeField, Min(1)] public float Duration { get; set; } // 1.0x
+        [field: SerializeField, Min(1)] public float Duration { get; set; } = 1.0f; // 1.0x
         
         public ProjectileStatistics(ProjectileStatistics projectileStatistics)
         {
@@ -96,6 +95,7 @@ namespace Riftcore.Gameplay.Stats
                     return true;
                 
                 default:
+                    value = 0f;
                     return false;
             }
         }

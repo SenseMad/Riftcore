@@ -14,3 +14,4 @@ MonoBehaviour:
   m_EditorClassIdentifier: Riftcore::Riftcore.Gameplay.InventoryManagement.Data.ItemCategoryDatabase
   <Categories>k__BackingField:
   - {fileID: 11400000, guid: 4e69668c8d17a1c42bab0083ca21e32a, type: 2}
+  - {fileID: 11400000, guid: ff839c4beae11d74796399805b883096, type: 2}

@@ -1,7 +1,6 @@
 using System.Collections.Generic;
 using System.Linq;
 using Riftcore.Core.GameState;
-using Riftcore.Gameplay.Inventory;
 using Riftcore.Gameplay.Inventory.Core;
 using Riftcore.Gameplay.Inventory.Data;
 using Riftcore.Gameplay.Players.Core;

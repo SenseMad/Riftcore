@@ -20,10 +20,11 @@ namespace Riftcore.Gameplay.Enemies.Spawning
         [Inject] private readonly EnemySpawnSettings _enemySpawnSettings;
         [Inject] private readonly GameplayLockService _gameplayLockService;
 
-        private const float GameTime = 10f;
+        private Player _player;
+
+        private const float DifficultyGrowTime = 600f;
         
         private float _elapsedTime;
-        private float _nextTickTime;
         
         private bool _playerReady;
 
@@ -44,6 +45,8 @@ namespace Riftcore.Gameplay.Enemies.Spawning
 
         private void OnPlayerSpawned(Player player)
         {
+            _player = player;
+            
             _enemySpawnPointFinder.SetPlayer(player);
             _playerReady = true;
         }
@@ -72,7 +75,7 @@ namespace Riftcore.Gameplay.Enemies.Spawning
             if (time < enemySpawnEntry.MinAppearTime)
                 return;
 
-            float normalizedTime = Mathf.Clamp01(time / GameTime);
+            float normalizedTime = Mathf.Clamp01(time / DifficultyGrowTime);
             float interval = enemySpawnEntry.BaseSpawnInterval * enemySpawnEntry.IntervalMultiplierCurve.Evaluate(normalizedTime);
             float nextTime = _nextSpawnTime.GetValueOrDefault(enemySpawnEntry, 0f);
             
@@ -98,7 +101,7 @@ namespace Riftcore.Gameplay.Enemies.Spawning
             }
             else
             {
-                var enemies = SpawnGroup(enemySpawnEntry.EnemyData.EnemyPrefab, groupSize);
+                var enemies = SpawnGroup(enemySpawnEntry, groupSize);
                 if (enemies != null && enemies.Count > 0)
                 {
                     foreach (var enemy in enemies)
@@ -142,17 +145,18 @@ namespace Riftcore.Gameplay.Enemies.Spawning
             return enemy;
         }
 
-        public List<Enemy> SpawnGroup(Enemy enemyPrefab, int count)
+        public List<Enemy> SpawnGroup(EnemySpawnEntry enemySpawnEntry, int count)
         {
             if (count <= 0)
                 return null;
             
             List<Enemy> spawnedEnemies = new();
-
-            int finalCount = (int)(count + (count * (1 / 100f)));
+            
+            float difficultyMultiplier = 1f + _player.GameStatistics.LevelStatistics.Difficulty / 100f;
+            int finalCount = Mathf.Clamp(Mathf.RoundToInt(count * difficultyMultiplier), 1, enemySpawnEntry.MaxGroupSize);
             if (finalCount == 1)
             {
-                Enemy singleEnemy = SpawnEnemyNearPlayer(enemyPrefab);
+                Enemy singleEnemy = SpawnEnemyNearPlayer(enemySpawnEntry.EnemyData.EnemyPrefab);
                 if (singleEnemy != null)
                     spawnedEnemies.Add(singleEnemy);
                 
@@ -165,7 +169,8 @@ namespace Riftcore.Gameplay.Enemies.Spawning
                 return spawnedEnemies;
             }
 
-            float groupRadius = Mathf.Clamp(count * 0.5f, 1f, 8f);
+            float groupRadius = Mathf.Clamp(finalCount * enemySpawnEntry.GroupRadiusPerEnemy, 
+                enemySpawnEntry.MinGroupRadius, enemySpawnEntry.MaxGroupRadius);
 
             for (int i = 0; i < finalCount; i++)
             {
@@ -175,7 +180,7 @@ namespace Riftcore.Gameplay.Enemies.Spawning
                 if (_enemySpawnPointFinder.FindGroundBelow(spawnPosition, out var finalPosition)
                     && _enemySpawnPointFinder.IsPositionFree(finalPosition))
                 {
-                    var enemy = SpawnEnemyAt(enemyPrefab, finalPosition);
+                    var enemy = SpawnEnemyAt(enemySpawnEntry.EnemyData.EnemyPrefab, finalPosition);
                     spawnedEnemies.Add(enemy);
                 }
             }

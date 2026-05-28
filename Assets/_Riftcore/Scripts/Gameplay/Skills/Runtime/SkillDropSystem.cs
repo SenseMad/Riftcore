@@ -36,6 +36,12 @@ namespace Riftcore.Gameplay.Skills.Runtime
         private void OnLevelUp(int level)
         {
             List<SkillReward> rewards = _skillSelectionService.GenerateChoices(3);
+
+            if (rewards.Count == 0)
+            {
+                _experienceService.CompleteLevelUpSelection();
+                return;
+            }
             
             _gameplayLockService.Lock(this);
             
@@ -49,6 +55,10 @@ namespace Riftcore.Gameplay.Skills.Runtime
             _skillChoicePanel.Hide();
             
             _gameplayLockService.Unlock(this);
+            
+            _experienceService.CompleteLevelUpSelection();
+            
+            _skillSelectionService.SelectSkill(reward);
         }
     }
 }

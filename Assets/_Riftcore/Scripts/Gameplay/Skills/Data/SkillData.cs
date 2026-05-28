@@ -14,13 +14,18 @@ namespace Riftcore.Gameplay.Skills.Data
         [field: SerializeField] public Sprite Icon { get; private set; }
         [field: SerializeField] public bool IsPercentValue { get; private set; }
         
+        [Header("Max Value")]
+        [field: SerializeField] public bool HasMaxValue { get; private set; }
+        [field: SerializeField, Min(0)] public float MaxValue { get; private set; }
+        
+        [Header("RarityValues")]
         [field: SerializeField] public List<RarityValue> RarityValues { get; private set; }
 
         public StatModifierData GetModifier(SkillRarity skillRarity)
         {
             float value = GetValue(skillRarity);
 
-            return new StatModifierData(StatType, StatOperation, value);
+            return new StatModifierData(StatType, StatOperation, value, HasMaxValue, MaxValue);
         }
 
         public float GetValue(SkillRarity skillRarity)

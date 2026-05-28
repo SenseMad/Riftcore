@@ -4,7 +4,8 @@ using UnityEngine;
 
 namespace Riftcore.Gameplay.Weapons.Data
 {
-    public abstract class WeaponData : ScriptableObject
+    [CreateAssetMenu(fileName = "WeaponData", menuName = "Riftcore/Weapon/Data/WeaponData")]
+    public class WeaponData : ScriptableObject
     {
         [field: Header("Data")]
         [field: SerializeField] public ItemData ItemData { get; private set; }

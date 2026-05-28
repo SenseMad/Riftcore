@@ -14,11 +14,6 @@ namespace Riftcore.Gameplay.Skills.Data
             Container.Bind<RarityDatabase>().FromInstance(this).AsSingle();
         }
 
-        public SkillRarity GetNewItemRarity()
-        {
-            return SkillRarity.New;
-        }
-
         public SkillRarity GetRandomRarity(float luck)
         {
             float totalWeight = 0f;

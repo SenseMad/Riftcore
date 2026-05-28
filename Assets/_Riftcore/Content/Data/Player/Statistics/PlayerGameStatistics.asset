@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Riftcore::Riftcore.Gameplay.PlayerManagement.PlayerGameStatistics
   <BaseStatistics>k__BackingField:
     <HealthStatistics>k__BackingField:
-      <MaxHealth>k__BackingField: 0
+      <MaxHealth>k__BackingField: 100
       <RegenerationHealth>k__BackingField: 0
       <Armor>k__BackingField: 0
       <Shield>k__BackingField: 0
@@ -22,24 +22,24 @@ MonoBehaviour:
       <Vampirism>k__BackingField: 0
       <Spikes>k__BackingField: 0
     <MovementStatistics>k__BackingField:
-      <MoveSpeed>k__BackingField: 0
-      <JumpHeight>k__BackingField: 0
+      <MultiplierMoveSpeed>k__BackingField: 1
+      <JumpHeight>k__BackingField: 1.5
       <NumberJumps>k__BackingField: 0
     <CombatStatistics>k__BackingField:
-      <Damage>k__BackingField: 0
-      <AttackSpeed>k__BackingField: 0
+      <Damage>k__BackingField: 1
+      <AttackSpeed>k__BackingField: 1
       <CritChance>k__BackingField: 0
-      <CritDamage>k__BackingField: 0
+      <CritDamage>k__BackingField: 1
     <ProjectileStatistics>k__BackingField:
       <ProjectileCount>k__BackingField: 0
-      <ProjectileSize>k__BackingField: 0
-      <ProjectileSpeed>k__BackingField: 0
+      <ProjectileSize>k__BackingField: 1
+      <ProjectileSpeed>k__BackingField: 1
       <ProjectileFiringRange>k__BackingField: 0
       <ProjectileBounceCount>k__BackingField: 0
       <ProjectilePenetration>k__BackingField: 0
-      <Duration>k__BackingField: 0
+      <Duration>k__BackingField: 1
     <LevelStatistics>k__BackingField:
       <Difficulty>k__BackingField: 0
       <Luck>k__BackingField: 0
-      <CollectingRadius>k__BackingField: 0
+      <CollectingRadius>k__BackingField: 2
       <MultiplierExperience>k__BackingField: 1

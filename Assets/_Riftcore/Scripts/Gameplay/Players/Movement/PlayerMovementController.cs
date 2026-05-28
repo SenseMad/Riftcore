@@ -16,7 +16,7 @@ namespace Riftcore.Gameplay.Players.Movement
 
         [Header("Gravity")]
         [SerializeField, Min(0)] private float _gravity = 35.0f;
-        [SerializeField, Min(0)] private float _jumpHeight = 1.5f;
+        //[SerializeField, Min(0)] private float _jumpHeight = 1.5f;
         [SerializeField, Min(0)] private float _groundedGravity = 2.0f;
 
         [Header("Jump Helpers")]
@@ -97,7 +97,7 @@ namespace Riftcore.Gameplay.Players.Movement
             _lastJumpPressedTime = -999f;
             _lastGroundedTime = -999f;
 
-            _velocity.y = Mathf.Sqrt(_jumpHeight * 2f * _gravity);
+            _velocity.y = Mathf.Sqrt(_player.GameStatistics.MovementStatistics.JumpHeight * 2f * _gravity);
         }
         
         private Vector3 GetMoveDirection(Vector2 input)
@@ -130,7 +130,7 @@ namespace Riftcore.Gameplay.Players.Movement
             else
                 baseSpeed = _speedWalking;
 
-            return baseSpeed;
+            return baseSpeed * _player.GameStatistics.MovementStatistics.MultiplierMoveSpeed;
         }
         
         private void Rotate(Vector3 moveDirection, PlayerState playerState)

@@ -1,5 +1,4 @@
 using System;
-using Riftcore.Gameplay.Skills;
 using Riftcore.Gameplay.Skills.Stats;
 using UnityEngine;
 
@@ -8,13 +7,13 @@ namespace Riftcore.Gameplay.Stats
     [Serializable]
     public sealed class MovementStatistics
     {
-        [field: SerializeField, Min(1)] public float MoveSpeed { get; set; } // 1.0x
+        [field: SerializeField, Min(1)] public float MultiplierMoveSpeed { get; set; } = 1.0f; // 1.0x
         [field: SerializeField, Min(0)] public float JumpHeight { get; set; } // 0 - ...
         [field: SerializeField, Min(0)] public int NumberJumps { get; set; } // 0 - ...
         
         public MovementStatistics(MovementStatistics movementStatistics)
         {
-            MoveSpeed = movementStatistics.MoveSpeed;
+            MultiplierMoveSpeed = movementStatistics.MultiplierMoveSpeed;
             JumpHeight = movementStatistics.JumpHeight;
             NumberJumps = movementStatistics.NumberJumps;
         }
@@ -24,7 +23,7 @@ namespace Riftcore.Gameplay.Stats
             switch (statModifierData.StatType)
             {
                 case StatType.MoveSpeed:
-                    MoveSpeed = statModifierData.Apply(MoveSpeed);
+                    MultiplierMoveSpeed = statModifierData.Apply(MultiplierMoveSpeed);
                     break;
                 
                 case StatType.JumpHeight:
@@ -44,7 +43,7 @@ namespace Riftcore.Gameplay.Stats
             switch (statType)
             {
                 case StatType.MoveSpeed:
-                    value = MoveSpeed;
+                    value = MultiplierMoveSpeed;
                     return true;
                 
                 case StatType.JumpHeight:

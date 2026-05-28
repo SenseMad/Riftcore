@@ -46,7 +46,7 @@ namespace Riftcore.Gameplay.Skills.UI
 
             _levelText.text = skillReward.IsNewItem ? "New" : $"LVL {skillReward.CurrentLevel}";
             
-            CreateSkillLines(SkillReward);
+            CreateSkillLines(skillReward);
         }
 
         public void SetSkillReward(SkillReward skillReward, Action<SkillReward> onChosen)
@@ -66,17 +66,18 @@ namespace Riftcore.Gameplay.Skills.UI
         {
             ClearSkillLines();
 
-            if (skillReward.IsNewItem)
+            /*if (skillReward.IsNewItem)
             {
                 //CreateSkillLine("New item");
-                return;
-            }
+                //return;
+            }*/
 
             foreach (var skill in skillReward.SkillDatas)
             {
                 float oldValue = 0f;
 
-                _statValueProvider.TryGetValue(skillReward.ItemData, skill.StatType, out oldValue);
+                if (!skillReward.IsNewItem)
+                    _statValueProvider.TryGetValue(skillReward.ItemData, skill.StatType, out oldValue);
                 
                 CreateSkillLine(skill.GetFormattedChange(oldValue, skillReward.SkillRarity));
             }

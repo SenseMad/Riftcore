@@ -1,9 +1,9 @@
 using System.Collections.Generic;
-using Riftcore.Gameplay.Enemies;
-using Riftcore.Gameplay.Enemies.Core;
+using Riftcore.Gameplay.HealthSystem;
 using Riftcore.Gameplay.Projectiles.Core;
 using Riftcore.Gameplay.Projectiles.HitHandling.Interfaces;
 using Riftcore.World.Grid;
+using UnityEngine;
 
 namespace Riftcore.Gameplay.Projectiles.HitHandling.Implementations
 {
@@ -13,7 +13,7 @@ namespace Riftcore.Gameplay.Projectiles.HitHandling.Implementations
         private ProjectileContext _projectileContext;
 
         private float _pierce;
-        private readonly HashSet<Enemy> _hitEnemies = new();
+        private readonly HashSet<Collider> _hitColliders = new();
         
         public void Initialize(Projectile projectile, ProjectileContext projectileContext, EnemyGrid enemyGrid)
         {
@@ -21,15 +21,18 @@ namespace Riftcore.Gameplay.Projectiles.HitHandling.Implementations
             _projectileContext = projectileContext;
 
             _pierce = projectileContext.PierceCount;
-            _hitEnemies.Clear();
+            _hitColliders.Clear();
         }
 
-        public void OnHit(Enemy enemy)
+        public void OnHit(IDamageable damageable, Collider hitCollider)
         {
-            if (!_hitEnemies.Add(enemy))
+            if (damageable == null)
                 return;
             
-            enemy.TakeDamage(_projectileContext.Damage);
+            if (!_hitColliders.Add(hitCollider))
+                return;
+            
+            damageable.TakeDamage(_projectileContext.Damage);
 
             if (_pierce > 0)
             {
@@ -42,13 +45,13 @@ namespace Riftcore.Gameplay.Projectiles.HitHandling.Implementations
 
         public void Reset()
         {
-            _hitEnemies.Clear();
+            _hitColliders.Clear();
             _pierce = _projectileContext.PierceCount;
         }
 
         public void OnDeath()
         {
-            _hitEnemies.Clear();
+            _hitColliders.Clear();
         }
     }
 }

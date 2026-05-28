@@ -19,13 +19,13 @@ MonoBehaviour:
   <Icon>k__BackingField: {fileID: 0}
   <IsPercentValue>k__BackingField: 0
   <RarityValues>k__BackingField:
-  - <SkillRarity>k__BackingField: 1
+  - <SkillRarity>k__BackingField: 0
     <Value>k__BackingField: 100
-  - <SkillRarity>k__BackingField: 2
+  - <SkillRarity>k__BackingField: 1
     <Value>k__BackingField: 75
-  - <SkillRarity>k__BackingField: 3
+  - <SkillRarity>k__BackingField: 2
     <Value>k__BackingField: 50
-  - <SkillRarity>k__BackingField: 4
+  - <SkillRarity>k__BackingField: 3
     <Value>k__BackingField: 25
-  - <SkillRarity>k__BackingField: 5
+  - <SkillRarity>k__BackingField: 4
     <Value>k__BackingField: 5

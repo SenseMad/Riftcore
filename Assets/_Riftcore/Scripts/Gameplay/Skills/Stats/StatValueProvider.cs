@@ -1,6 +1,6 @@
 using Riftcore.Core.Game;
-using Riftcore.Gameplay.Inventory;
 using Riftcore.Gameplay.Inventory.Data;
+using Riftcore.Gameplay.Players.Core;
 
 namespace Riftcore.Gameplay.Skills.Stats
 {
@@ -20,15 +20,17 @@ namespace Riftcore.Gameplay.Skills.Stats
             var player = _gameContext.Player;
             if (player == null)
                 return false;
+            
+            IStatProvider statProvider = GetStatProvider(player, itemData);
+            return statProvider != null && statProvider.TryGetStatValue(statType, out value);
+        }
 
-            // Тут я тоже думаю надо менять
+        private IStatProvider GetStatProvider(Player player, ItemData itemData)
+        {
             if (itemData.ItemCategory == ItemCategory.Weapon)
-            {
-                var weapon = player.PlayerWeaponController.GetWeapon(itemData);
-                return weapon != null && weapon.TryGetStatValue(statType, out value);
-            }
+                return player.PlayerWeaponController.GetWeapon(itemData);
 
-            return player.GameStatistics.TryGetValue(statType, out value);
+            return player.GameStatistics;
         }
     }
 }

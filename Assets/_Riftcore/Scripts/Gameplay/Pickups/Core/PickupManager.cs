@@ -1,5 +1,6 @@
 using System.Collections.Generic;
 using Riftcore.Core.GameState;
+using Riftcore.World.Grid;
 using UnityEngine;
 using Zenject;
 
@@ -8,9 +9,12 @@ namespace Riftcore.Gameplay.Pickups.Core
     public sealed class PickupManager : MonoBehaviour
     {
         [Inject] private readonly PickupPool _pickupPool;
+        [Inject] private readonly PickupGrid _pickupGrid;
         [Inject] private readonly GameplayLockService _gameplayLockService;
         
         private readonly List<BasePickup> _activePickups = new();
+        
+        public IReadOnlyList<BasePickup> ActivePickups => _activePickups;
 
         private void Update()
         {
@@ -32,11 +36,13 @@ namespace Riftcore.Gameplay.Pickups.Core
         public void Register(BasePickup pickup)
         {
             _activePickups.Add(pickup);
+            _pickupGrid.Register(pickup);
         }
 
         public void Unregister(BasePickup pickup)
         {
             _activePickups.Remove(pickup);
+            _pickupGrid.Unregister(pickup);
             
             _pickupPool.Return(pickup);
         }

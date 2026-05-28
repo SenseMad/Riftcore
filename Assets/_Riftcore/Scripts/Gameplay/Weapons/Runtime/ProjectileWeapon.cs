@@ -1,13 +1,10 @@
-using Riftcore.Gameplay.Enemies;
 using Riftcore.Gameplay.Enemies.Core;
-using Riftcore.Gameplay.Players;
 using Riftcore.Gameplay.Players.Core;
 using Riftcore.Gameplay.Projectiles.Core;
 using Riftcore.Gameplay.Projectiles.HitHandling.Implementations;
 using Riftcore.Gameplay.Projectiles.HitHandling.Interfaces;
 using Riftcore.Gameplay.Projectiles.Lifetime.Implementations;
 using Riftcore.Gameplay.Projectiles.Movement.Interfaces;
-using Riftcore.Gameplay.Skills;
 using Riftcore.Gameplay.Skills.Stats;
 using Riftcore.Gameplay.Stats;
 using Riftcore.Gameplay.Weapons.Data;
@@ -87,9 +84,9 @@ namespace Riftcore.Gameplay.Weapons.Runtime
         {
             int finalDamage = CriticalDamage(out bool isCritical);
             float projectileRange = ProjectileStatistics.ProjectileFiringRange;
-            float projectileSize = ProjectileStatistics.ProjectileSize + _player.GameStatistics.ProjectileStatistics.ProjectileSize;
-            float projectileSpeed = ProjectileStatistics.ProjectileSpeed + _player.GameStatistics.ProjectileStatistics.ProjectileSpeed;
-            float duration = ProjectileStatistics.Duration + _player.GameStatistics.ProjectileStatistics.Duration;
+            float projectileSize = ProjectileStatistics.ProjectileSize * _player.GameStatistics.ProjectileStatistics.ProjectileSize;
+            float projectileSpeed = ProjectileStatistics.ProjectileSpeed * _player.GameStatistics.ProjectileStatistics.ProjectileSpeed;
+            float duration = ProjectileStatistics.Duration * _player.GameStatistics.ProjectileStatistics.Duration;
 
             int bounceCount = (int)(ProjectileStatistics.ProjectileBounceCount + _player.GameStatistics.ProjectileStatistics.ProjectileBounceCount);
             int pierceCount = (int)(ProjectileStatistics.ProjectilePenetration + _player.GameStatistics.ProjectileStatistics.ProjectilePenetration);

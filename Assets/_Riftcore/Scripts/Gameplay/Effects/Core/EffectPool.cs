@@ -6,22 +6,22 @@ namespace Riftcore.Gameplay.Effects.Core
 {
     public sealed class EffectPool : MonoBehaviour
     {
-        private ComponentPool<HitEffect> _pool;
+        private ComponentPool<Effect> _pool;
 
         [Inject]
         public void Construct(DiContainer container)
         {
-            _pool = new ComponentPool<HitEffect>(container, transform);
+            _pool = new ComponentPool<Effect>(container, transform);
         }
 
-        public HitEffect Get(HitEffect prefab)
+        public Effect Get(Effect prefab)
         {
             return _pool.Get(prefab);
         }
 
-        public void Return(HitEffect hitEffect)
+        public void Return(Effect effect)
         {
-            _pool.Return(hitEffect);
+            _pool.Return(effect);
         }
     }
 }

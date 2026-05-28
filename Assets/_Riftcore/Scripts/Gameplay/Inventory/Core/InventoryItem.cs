@@ -1,3 +1,4 @@
+using System;
 using Riftcore.Gameplay.Inventory.Data;
 
 namespace Riftcore.Gameplay.Inventory.Core
@@ -8,6 +9,8 @@ namespace Riftcore.Gameplay.Inventory.Core
         public int Level { get; private set; }
 
         public bool IsMaxLevel => Level >= ItemData.MaxLevel;
+        
+        public event Action<int> OnLevelUp;
         
         public InventoryItem(ItemData itemData)
         {
@@ -21,6 +24,7 @@ namespace Riftcore.Gameplay.Inventory.Core
                 return;
             
             Level++;
+            OnLevelUp?.Invoke(Level);
         }
     }
 }

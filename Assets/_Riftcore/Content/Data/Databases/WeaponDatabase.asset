@@ -14,3 +14,4 @@ MonoBehaviour:
   m_EditorClassIdentifier: Riftcore::Riftcore.Gameplay.WeaponManagement.Installer.WeaponDatabase
   <Weapons>k__BackingField:
   - {fileID: 11400000, guid: de9d8d2c1b4e61f498321b6d63639371, type: 2}
+  - {fileID: 11400000, guid: acf8a458292200f4b8ccd75a54049065, type: 2}

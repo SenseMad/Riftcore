@@ -1,5 +1,4 @@
 using System;
-using Riftcore.Gameplay.Skills;
 using Riftcore.Gameplay.Skills.Stats;
 using UnityEngine;
 
@@ -10,8 +9,8 @@ namespace Riftcore.Gameplay.Stats
     {
         [field: SerializeField, Min(0)] public float Difficulty { get; set; } // %
         [field: SerializeField, Min(0)] public float Luck { get; set; } // %
-        [field: SerializeField, Min(0)] public float CollectingRadius { get; set; } // %
-        [field: SerializeField, Min(1)] public float MultiplierExperience { get; set; } = 1f; // %
+        [field: SerializeField, Min(0)] public float CollectingRadius { get; set; } // 0 ...
+        [field: SerializeField, Min(1)] public float MultiplierExperience { get; set; } = 1.0f; // 1.0x
 
         public LevelStatistics(LevelStatistics levelStatistics)
         {

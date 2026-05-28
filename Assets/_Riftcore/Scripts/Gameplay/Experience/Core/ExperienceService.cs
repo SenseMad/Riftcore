@@ -61,8 +61,8 @@ namespace Riftcore.Gameplay.Experience.Core
 
         private void TryLevelUp()
         {
-            /*if (IsLevelUpPending)
-                return;*/
+            if (IsLevelUpPending)
+                return;
 
             int requiredExperience = RequiredExperience;
             if (CurrentExperience < requiredExperience)

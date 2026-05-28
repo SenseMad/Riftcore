@@ -1,6 +1,5 @@
 using Riftcore.Core.Cursor;
 using Riftcore.Core.Game;
-using Riftcore.Gameplay.Players;
 using Riftcore.Gameplay.Players.Core;
 using Riftcore.Gameplay.Players.Data;
 using UnityEngine;

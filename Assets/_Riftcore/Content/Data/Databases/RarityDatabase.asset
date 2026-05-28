@@ -13,13 +13,18 @@ MonoBehaviour:
   m_Name: RarityDatabase
   m_EditorClassIdentifier: Riftcore::Riftcore.Gameplay.SkillManagement.RarityDatabase
   <RarityChanceDatas>k__BackingField:
-  - <SkillRarity>k__BackingField: 1
+  - <SkillRarity>k__BackingField: 0
     <Weight>k__BackingField: 100
-  - <SkillRarity>k__BackingField: 2
+    <Color>k__BackingField: {r: 0, g: 0, b: 0, a: 0}
+  - <SkillRarity>k__BackingField: 1
     <Weight>k__BackingField: 75
-  - <SkillRarity>k__BackingField: 3
+    <Color>k__BackingField: {r: 0, g: 0, b: 0, a: 0}
+  - <SkillRarity>k__BackingField: 2
     <Weight>k__BackingField: 50
-  - <SkillRarity>k__BackingField: 4
+    <Color>k__BackingField: {r: 0, g: 0, b: 0, a: 0}
+  - <SkillRarity>k__BackingField: 3
     <Weight>k__BackingField: 25
-  - <SkillRarity>k__BackingField: 5
+    <Color>k__BackingField: {r: 0, g: 0, b: 0, a: 0}
+  - <SkillRarity>k__BackingField: 4
     <Weight>k__BackingField: 5
+    <Color>k__BackingField: {r: 0, g: 0, b: 0, a: 0}

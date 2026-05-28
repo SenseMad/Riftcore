@@ -1,17 +1,19 @@
-using Riftcore.Gameplay.Inventory;
+using Riftcore.Gameplay.HealthSystem;
 using Riftcore.Gameplay.Inventory.Core;
 using Riftcore.Gameplay.Players.Combat;
 using Riftcore.Gameplay.Players.Data;
+using Riftcore.Gameplay.Players.Effects;
 using Riftcore.Gameplay.Players.Input;
 using Riftcore.Gameplay.Players.Movement;
 using Riftcore.Gameplay.Players.PlayerCamera;
+using Riftcore.Gameplay.Projectiles.HitHandling.Interfaces;
 using Riftcore.Gameplay.Stats;
 using UnityEngine;
 
 namespace Riftcore.Gameplay.Players.Core
 {
     [RequireComponent(typeof(CharacterController))]
-    public sealed class Player : MonoBehaviour
+    public sealed class Player : MonoBehaviour, IProjectileTarget
     {
         public PlayerData PlayerData  { get; private set; }
         public GameStatistics GameStatistics { get; private set; }
@@ -20,11 +22,17 @@ namespace Riftcore.Gameplay.Players.Core
         public PlayerCameraController PlayerCameraController { get; private set; }
         public PlayerMovementController PlayerMovementController { get; private set; }
         public PlayerWeaponController PlayerWeaponController { get; private set; }
-        public CharacterController CharacterController { get; private set; }
-        
+        public PlayerEffects PlayerEffects { get; private set; }
         public PlayerInventory PlayerInventory { get; private set; }
         
+        public CharacterController CharacterController { get; private set; }
+        
+        public Health Health { get; private set; }
+        public Damageable Damageable { get; private set; }
+        
         public Collider Collider { get; private set; }
+        
+        public Transform Transform => transform;
 
         private void Awake()
         {
@@ -32,10 +40,14 @@ namespace Riftcore.Gameplay.Players.Core
             PlayerCameraController = GetComponentInChildren<PlayerCameraController>();
             PlayerMovementController = GetComponentInChildren<PlayerMovementController>();
             PlayerWeaponController = GetComponentInChildren<PlayerWeaponController>();
+            PlayerEffects = GetComponentInChildren<PlayerEffects>();
+            
+            PlayerInventory = new PlayerInventory();
 
             CharacterController = GetComponent<CharacterController>();
             
-            PlayerInventory = new PlayerInventory();
+            Health = GetComponent<Health>();
+            Damageable = GetComponent<Damageable>();
             
             Collider = GetComponent<Collider>();
         }
@@ -53,8 +65,13 @@ namespace Riftcore.Gameplay.Players.Core
 
             CharacterController.enabled = value;
         }
+
+        public void TakeDamage(float damage)
+        {
+            Health.TakeDamage(damage);
+        }
         
-        public void SetPositionAndRotation(Vector3 position, Quaternion rotation)
+        /*public void SetPositionAndRotation(Vector3 position, Quaternion rotation)
         {
             SetActiveControl(false);
 
@@ -72,6 +89,6 @@ namespace Riftcore.Gameplay.Players.Core
             PlayerCameraController.ForceCameraWarp(delta);
 
             SetActiveControl(true);
-        }
+        }*/
     }
 }

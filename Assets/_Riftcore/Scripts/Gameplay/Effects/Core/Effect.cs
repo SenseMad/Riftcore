@@ -7,7 +7,7 @@ using IPoolable = Riftcore.Pooling.IPoolable;
 
 namespace Riftcore.Gameplay.Effects.Core
 {
-    public sealed class HitEffect : PoolItem, IPoolable
+    public sealed class Effect : PoolItem, IPoolable
     {
         [SerializeField] private ParticleSystem _particleSystem;
 
@@ -15,7 +15,7 @@ namespace Riftcore.Gameplay.Effects.Core
         [Inject] private readonly GameplayLockService _gameplayLockService;
         
         private Coroutine _returnCoroutine;
-
+        
         private void OnEnable()
         {
             _gameplayLockService.OnGameplayAllowedChanged += OnGameplayAllowedChanged;
@@ -25,13 +25,13 @@ namespace Riftcore.Gameplay.Effects.Core
         {
             _gameplayLockService.OnGameplayAllowedChanged -= OnGameplayAllowedChanged;
         }
-
+        
         public void Play(Vector3 position, Quaternion rotation)
         {
             transform.SetPositionAndRotation(position, rotation);
-            gameObject.SetActive(true);
             
-            _particleSystem.Play();
+            _particleSystem.Stop(true, ParticleSystemStopBehavior.StopEmittingAndClear);
+            _particleSystem.Play(true);
             
             if (_returnCoroutine != null)
                 StopCoroutine(_returnCoroutine);
@@ -41,7 +41,7 @@ namespace Riftcore.Gameplay.Effects.Core
         
         public void OnGetFromPool()
         {
-            gameObject.SetActive(false);
+            _returnCoroutine = null;
         }
 
         public void OnReturnToPool()
@@ -53,8 +53,6 @@ namespace Riftcore.Gameplay.Effects.Core
             }
             
             _particleSystem.Stop(true,  ParticleSystemStopBehavior.StopEmittingAndClear);
-            
-            gameObject.SetActive(false);
         }
 
         private IEnumerator ReturnAfterPlay()

@@ -24,7 +24,7 @@ namespace Riftcore.Gameplay.Pickups.Runtime
         public override void OnPickup(Player player)
         {
             _experienceService.AddExperience(Mathf.CeilToInt(AmountExperience * player.GameStatistics.LevelStatistics.MultiplierExperience));
-            _pickupManager.Unregister(this);
+            base.OnPickup(player);
         }
     }
 }

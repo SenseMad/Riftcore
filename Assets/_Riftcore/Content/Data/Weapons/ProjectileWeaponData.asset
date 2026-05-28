@@ -16,8 +16,8 @@ MonoBehaviour:
   <AttackRange>k__BackingField: 25
   <AttackPerMinutes>k__BackingField: 120
   <CombatStatistics>k__BackingField:
-    <Damage>k__BackingField: 1
-    <AttackSpeed>k__BackingField: 0
+    <Damage>k__BackingField: 50
+    <AttackSpeed>k__BackingField: 1
     <CritChance>k__BackingField: 0
     <CritDamage>k__BackingField: 0
   <ProjectileStatistics>k__BackingField:

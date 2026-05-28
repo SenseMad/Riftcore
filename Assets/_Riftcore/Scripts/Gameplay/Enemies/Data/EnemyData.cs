@@ -20,6 +20,8 @@ namespace Riftcore.Gameplay.Enemies.Data
         [field: SerializeField, Min(0)] public float AttackRange { get; private set; }
         [field: SerializeField, Min(0)] public float AttackSpeed { get; private set; }
         [field: SerializeField, Min(0)] public float Damage { get; private set; }
+        [field: SerializeField, Min(0)] public float TouchDamage { get; private set; }
+        [field: SerializeField, Min(0)] public float TouchDamageInterval { get; private set; }
         
         [field: Header("Health")]
         [field: SerializeField, Min(0)] public int MaxHealth { get; private set; }

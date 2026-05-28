@@ -152,6 +152,8 @@ Transform:
   - {fileID: 6476055511946467031}
   - {fileID: 8259603996556634946}
   - {fileID: 3599818377575205998}
+  - {fileID: 7591426834031957269}
+  - {fileID: 4263859855115938758}
   m_Father: {fileID: 1463567624366458530}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &3916208471564050635
@@ -203,7 +205,6 @@ MonoBehaviour:
   _acceleration: 9
   _deceleration: 11
   _gravity: 35
-  _jumpHeight: 1.5
   _groundedGravity: 2
   _coyoteTime: 0.12
   _jumpBufferTime: 0.12
@@ -221,6 +222,10 @@ GameObject:
   - component: {fileID: 6306659425437599761}
   - component: {fileID: 1196899478499602227}
   - component: {fileID: 1019880551546279264}
+  - component: {fileID: 9033602507552319715}
+  - component: {fileID: 558848234365016436}
+  - component: {fileID: 3257422645305797322}
+  - component: {fileID: 3625965803956758522}
   m_Layer: 6
   m_Name: Player
   m_TagString: Player
@@ -318,6 +323,193 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2840b212620c4aa6b5c9ae8461f0ec5c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Riftcore::Riftcore.Gameplay.PlayerManagement.PlayerTickRunner
+--- !u!114 &9033602507552319715
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4212260170993974757}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 767a4affc43243f6a85763fdae84e088, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Riftcore::Riftcore.Gameplay.HealthSystem.Health
+  _maxHealth: 100
+--- !u!114 &558848234365016436
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4212260170993974757}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c6c303b8ce004d68a0f943bd5b28471e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Riftcore::Riftcore.Gameplay.HealthSystem.Damageable
+--- !u!114 &3257422645305797322
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4212260170993974757}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d0780eb1712345d08d17dc7dfb04246f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Riftcore::Riftcore.Gameplay.HealthSystem.HealthRegeneration
+  _regenerationDelay: 3
+--- !u!114 &3625965803956758522
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4212260170993974757}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 50b879b9e617491a84cf8f570b32cfb4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Riftcore::Riftcore.Gameplay.Players.Effects.ImmortalityEffect
+--- !u!1 &4350850739746879260
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 4263859855115938758}
+  - component: {fileID: 653054378351676022}
+  m_Layer: 0
+  m_Name: PlayerEffects
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &4263859855115938758
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4350850739746879260}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children:
+  - {fileID: 3167746968739890331}
+  - {fileID: 6093400099549795597}
+  - {fileID: 4383495269047577190}
+  - {fileID: 7079165104826415514}
+  m_Father: {fileID: 8917337188550041888}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &653054378351676022
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4350850739746879260}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3c9ab409e7284a258f91f21b47b78eaf, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Riftcore::Riftcore.Gameplay.Players.Effects.PlayerEffects
+--- !u!1 &5518480952782743751
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 7079165104826415514}
+  - component: {fileID: 1384831742091317933}
+  m_Layer: 0
+  m_Name: SpikesEffect
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &7079165104826415514
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5518480952782743751}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 4263859855115938758}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1384831742091317933
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5518480952782743751}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9075ca299cfa46b29ab8dc9715d4612c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Riftcore::Riftcore.Gameplay.Players.Effects.SpikesEffect
+--- !u!1 &5614064953580141980
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 3167746968739890331}
+  - component: {fileID: 7190386683459444854}
+  m_Layer: 0
+  m_Name: HealthRegenerationEffect
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &3167746968739890331
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5614064953580141980}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 4263859855115938758}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &7190386683459444854
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5614064953580141980}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d0780eb1712345d08d17dc7dfb04246f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Riftcore::Riftcore.Gameplay.Players.Effects.HealthRegenerationEffect
+  _regenerationDelay: 3
 --- !u!1 &6009687368708025927
 GameObject:
   m_ObjectHideFlags: 0
@@ -364,6 +556,50 @@ MonoBehaviour:
   m_EditorClassIdentifier: Riftcore::Riftcore.Gameplay.PlayerManagement.PlayerCamera.PlayerCameraController
   _sensitivity: 0.25
   _pitchLimits: {x: -89, y: 89}
+--- !u!1 &6255690569734212088
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 4383495269047577190}
+  - component: {fileID: 8524366599900340501}
+  m_Layer: 0
+  m_Name: VampirismEffect
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &4383495269047577190
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6255690569734212088}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 4263859855115938758}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &8524366599900340501
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6255690569734212088}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d3cbb2dbab204d95b263310738977e70, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Riftcore::Riftcore.Gameplay.Players.Effects.VampirismEffect
 --- !u!1 &6770530541587778780
 GameObject:
   m_ObjectHideFlags: 0
@@ -408,7 +644,50 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7996571b471e4e29bc2f796f3ffe4b7e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Riftcore::Riftcore.Gameplay.PlayerManagement.PlayerWeaponController
-  _weaponData: {fileID: 11400000, guid: de9d8d2c1b4e61f498321b6d63639371, type: 2}
+--- !u!1 &8469706791660832009
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 7591426834031957269}
+  - component: {fileID: 2979081143287339459}
+  m_Layer: 0
+  m_Name: PickupMagnet
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &7591426834031957269
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8469706791660832009}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 8917337188550041888}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &2979081143287339459
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8469706791660832009}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4cf5186d8b574c03ae8cee45a9bfe341, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Riftcore::Riftcore.Gameplay.Pickups.Core.PickupMagnet
 --- !u!1 &8767890633044085042
 GameObject:
   m_ObjectHideFlags: 0
@@ -612,3 +891,47 @@ MeshRenderer:
   m_SortingOrder: 0
   m_MaskInteraction: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!1 &9126798257651491701
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 6093400099549795597}
+  - component: {fileID: 4520065281712988180}
+  m_Layer: 0
+  m_Name: ImmortalityEffect
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &6093400099549795597
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 9126798257651491701}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 4263859855115938758}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &4520065281712988180
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 9126798257651491701}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 50b879b9e617491a84cf8f570b32cfb4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Riftcore::Riftcore.Gameplay.Players.Effects.ImmortalityEffect

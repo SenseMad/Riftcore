@@ -26,5 +26,8 @@ namespace Riftcore.Gameplay.Enemies.Spawning
         [field: SerializeField] public AnimationCurve GroupSizeCurve { get; private set; } = AnimationCurve.Linear(0f, 1f, 1f, 4f);
         [field: Tooltip("Максимальный размер группы")]
         [field: SerializeField, Min(1)] public int MaxGroupSize { get; private set; } = 5;
+        [field: SerializeField, Min(0)] public float GroupRadiusPerEnemy { get; private set; } = 0.5f;
+        [field: SerializeField, Min(1)] public float MinGroupRadius { get; private set; } = 1f;
+        [field: SerializeField, Min(1)] public float MaxGroupRadius { get; private set; } = 8f;
     }
 }

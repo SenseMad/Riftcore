@@ -1,8 +1,6 @@
 using Riftcore.Core.Game;
-using Riftcore.Gameplay.Inventory;
 using Riftcore.Gameplay.Inventory.Core;
 using Riftcore.Gameplay.Inventory.Data;
-using Riftcore.Gameplay.Players;
 using Riftcore.Gameplay.Players.Core;
 using Riftcore.Gameplay.Skills.Data;
 using Riftcore.Gameplay.Skills.Stats;
@@ -41,9 +39,9 @@ namespace Riftcore.Gameplay.Skills.Runtime
         {
             var player = _gameContext.Player;
             
-            var rarity = skillReward.IsNewItem ? SkillRarity.Common : skillReward.SkillRarity;
-            var modifier = skillData.GetModifier(rarity);
-            
+            //var rarity = skillReward.IsNewItem ? SkillRarity.Common : skillReward.SkillRarity;
+            var modifier = skillData.GetModifier(skillReward.SkillRarity);
+
             if (skillReward.ItemData.ItemCategory == ItemCategory.Weapon)
                 ApplyWeaponModifier(player, skillReward.ItemData, modifier);
             else

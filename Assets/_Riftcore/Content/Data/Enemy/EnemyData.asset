@@ -18,6 +18,8 @@ MonoBehaviour:
   <AttackRange>k__BackingField: 0
   <AttackSpeed>k__BackingField: 0
   <Damage>k__BackingField: 0
+  <TouchDamage>k__BackingField: 1
+  <TouchDamageInterval>k__BackingField: 1
   <MaxHealth>k__BackingField: 0
   <ExperiencePickupPrefab>k__BackingField: {fileID: 7472832686185607173, guid: 46a7a32d921f30543ac6a032f76e0956, type: 3}
   <ExperienceAmount>k__BackingField: 50

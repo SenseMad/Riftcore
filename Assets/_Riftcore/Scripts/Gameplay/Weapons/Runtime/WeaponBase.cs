@@ -1,10 +1,9 @@
-using Riftcore.Gameplay.Skills;
 using Riftcore.Gameplay.Skills.Stats;
 using Riftcore.Gameplay.Weapons.Data;
 
 namespace Riftcore.Gameplay.Weapons.Runtime
 {
-    public abstract class Weapon
+    public abstract class Weapon : IStatProvider
     {
         public abstract WeaponData WeaponData { get; }
         

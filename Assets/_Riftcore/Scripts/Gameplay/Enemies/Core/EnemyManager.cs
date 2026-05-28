@@ -1,4 +1,3 @@
-using System;
 using System.Collections.Generic;
 using Riftcore.Core.GameState;
 using Riftcore.Gameplay.Enemies.Spawning;
@@ -10,7 +9,6 @@ namespace Riftcore.Gameplay.Enemies.Core
 {
     public sealed class EnemyManager : MonoBehaviour
     {
-        //[Inject] private readonly Player _player;
         [Inject] private readonly EnemyGrid _enemyGrid;
         [Inject] private readonly EnemySpawner _enemySpawner;
         [Inject] private readonly EnemyPickupDropper _enemyPickupDropper;
@@ -60,7 +58,7 @@ namespace Riftcore.Gameplay.Enemies.Core
                 return;
             
             _enemies.Add(enemy);
-
+            
             enemy.OnDie += OnEnemyDie;
             
             _enemyGrid.Register(enemy);

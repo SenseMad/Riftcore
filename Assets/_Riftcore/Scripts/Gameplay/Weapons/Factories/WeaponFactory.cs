@@ -1,4 +1,3 @@
-using Riftcore.Gameplay.Players;
 using Riftcore.Gameplay.Players.Core;
 using Riftcore.Gameplay.Projectiles.Core;
 using Riftcore.Gameplay.Weapons.Data;
@@ -19,6 +18,7 @@ namespace Riftcore.Gameplay.Weapons.Factories
             return weaponData switch
             {
                 ProjectileWeaponData projectileWeaponData => new ProjectileWeapon(projectileWeaponData, player, _projectileManager, _projectilePool, _enemyGrid),
+                WeaponData auraWeapon => new AuraWeapon(weaponData, player, _enemyGrid),
                 
                 _ => null
             };

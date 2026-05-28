@@ -6,7 +6,7 @@ using UnityEngine;
 namespace Riftcore.Gameplay.Stats
 {
     [Serializable]
-    public sealed class GameStatistics
+    public sealed class GameStatistics : IStatProvider
     {
         [field: SerializeField] public HealthStatistics HealthStatistics { get; set; }
         [field: SerializeField] public MovementStatistics MovementStatistics { get; set; }
@@ -50,6 +50,11 @@ namespace Riftcore.Gameplay.Stats
                 return true;
 
             return false;
+        }
+
+        public bool TryGetStatValue(StatType statType, out float value)
+        {
+            return TryGetValue(statType, out value);
         }
     }
 }

@@ -1,5 +1,4 @@
 using System.Collections.Generic;
-using Riftcore.Gameplay.Enemies;
 using Riftcore.Gameplay.Enemies.Core;
 using UnityEngine;
 
