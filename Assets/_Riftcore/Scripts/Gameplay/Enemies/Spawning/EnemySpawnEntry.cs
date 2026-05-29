@@ -20,9 +20,9 @@ namespace Riftcore.Gameplay.Enemies.Spawning
         [field: SerializeField] public AnimationCurve IntervalMultiplierCurve { get; private set; } = AnimationCurve.Linear(0f, 1f, 10f, 0.2f);
         
         [field: Header("Групповой спавн")]
-        [field: Tooltip("Шанс группового спавна")]
-        [field: SerializeField, Range(0f, 1f)] public float GroupSpawnChance { get; private set; } = 0.5f;
-        [field: Tooltip("Размер группы (кривая)")]
+        [field: Tooltip("Шанс группового спавна зависящий от времени")]
+        [field: SerializeField] public AnimationCurve GroupSpawnChanceCurve { get; private set; } = AnimationCurve.Linear(0f, 0.1f, 1f, 0.8f);
+        [field: Tooltip("Размер группы зависящий от времени")]
         [field: SerializeField] public AnimationCurve GroupSizeCurve { get; private set; } = AnimationCurve.Linear(0f, 1f, 1f, 4f);
         [field: Tooltip("Максимальный размер группы")]
         [field: SerializeField, Min(1)] public int MaxGroupSize { get; private set; } = 5;

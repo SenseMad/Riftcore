@@ -14,6 +14,9 @@ namespace Riftcore.Gameplay.Enemies.Installers
         
         [field: SerializeField] public LayerMask GroundMask { get; private set; }
         
+        [field: Header("Movement")]
+        [field: SerializeField] public LayerMask IgnoreClimbMask { get; private set; }
+        
         public override void InstallBindings()
         {
             Container.Bind<EnemyGlobalSpawnInstallerData>().FromInstance(this).AsSingle();

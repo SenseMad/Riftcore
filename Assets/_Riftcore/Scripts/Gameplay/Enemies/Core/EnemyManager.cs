@@ -82,7 +82,12 @@ namespace Riftcore.Gameplay.Enemies.Core
             _enemyPickupDropper.DropFromEnemy(enemy);
 
             Unregister(enemy);
-            _enemySpawner.Despawn(enemy);
+            //_enemySpawner.Despawn(enemy);
+            
+            enemy.PlayDeathAnimation(() =>
+            {
+                _enemySpawner.Despawn(enemy);
+            });
         }
         
         private void OnGameplayAllowedChanged(bool isGameplayAllowed)

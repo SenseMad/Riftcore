@@ -14,9 +14,12 @@ MonoBehaviour:
   m_EditorClassIdentifier: Riftcore::Riftcore.Gameplay.EnemyManagement.Installer.EnemyGlobalSpawnInstallerData
   <MinSpawnDistance>k__BackingField: 5
   <MaxSpawnDistance>k__BackingField: 25
-  <SpawnAngle>k__BackingField: 75
+  <SpawnAngle>k__BackingField: 180
   <SpawnHeight>k__BackingField: 15
   <CheckRadius>k__BackingField: 0.5
   <GroundMask>k__BackingField:
     serializedVersion: 2
     m_Bits: 128
+  <IgnoreClimbMask>k__BackingField:
+    serializedVersion: 2
+    m_Bits: 1856

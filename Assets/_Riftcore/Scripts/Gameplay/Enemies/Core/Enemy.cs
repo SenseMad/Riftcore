@@ -18,6 +18,12 @@ namespace Riftcore.Gameplay.Enemies.Core
         private Rigidbody _rigidbody;
         
         private Vector3 _lastPosition;
+
+        private EnemyVisual _enemyVisual;
+        private Collider[] _colliders;
+        private bool _isDying;
+        
+        public Animator Animator { get; private set; }
         
         public EnemyData EnemyData { get; private set; }
         
@@ -31,7 +37,12 @@ namespace Riftcore.Gameplay.Enemies.Core
 
         private void Awake()
         {
+            Animator = GetComponentInChildren<Animator>();
+            
             _rigidbody = GetComponent<Rigidbody>();
+
+            _enemyVisual = GetComponent<EnemyVisual>();
+            _colliders = GetComponentsInChildren<Collider>();
             
             Health = GetComponent<Health>();
             Health.OnDied += HandleDied;
@@ -64,17 +75,20 @@ namespace Riftcore.Gameplay.Enemies.Core
         public void SetPaused(bool isPaused)
         {
             _rigidbody.isKinematic = isPaused;
+            Animator.enabled = !isPaused;
         }
         
         public void OnGetFromPool()
         {
             IsActive = true;
+            _isDying = false;
             
             Health.ResetHealth();
             
-            /*_rigidbody.linearVelocity = Vector3.zero;
-            _rigidbody.angularVelocity = Vector3.zero;*/
             _rigidbody.WakeUp();
+
+            _enemyVisual.ResetVisual();
+            _enemyVisual.PlaySpawn();
 
             _lastPosition = transform.position;
         }
@@ -82,10 +96,23 @@ namespace Riftcore.Gameplay.Enemies.Core
         public void OnReturnToPool()
         {
             IsActive = false;
+            _isDying = false;
             
-            /*_rigidbody.linearVelocity = Vector3.zero;
-            _rigidbody.angularVelocity = Vector3.zero;*/
+            _enemyVisual.ResetVisual();
+            
             _rigidbody.Sleep();
+        }
+
+        public void PlayDeathAnimation(Action onComplete)
+        {
+            if (_isDying)
+                return;
+
+            _isDying = true;
+            IsActive = false;
+            
+            _rigidbody.Sleep();
+            _enemyVisual.PlayDeath(onComplete);
         }
         
         public void ResetSpawnPosition()

@@ -12,6 +12,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ef40155de4a24d31b9e36998173b80b6, type: 3}
   m_Name: EnemySpawnSettings
   m_EditorClassIdentifier: Riftcore::Riftcore.Gameplay.EnemyManagement.Configurations.EnemySpawnSettings
+  <UseDifficultyForInterval>k__BackingField: 1
+  <MinSpawnInterval>k__BackingField: 0.1
   <EnemySpawnEntries>k__BackingField:
   - <EnemyData>k__BackingField: {fileID: 11400000, guid: 6cd0807c71e9b714f82f875ee7f4ecaf, type: 2}
     <BaseSpawnChance>k__BackingField: 1
@@ -41,7 +43,30 @@ MonoBehaviour:
       m_PreInfinity: 2
       m_PostInfinity: 2
       m_RotationOrder: 4
-    <GroupSpawnChance>k__BackingField: 0
+    <GroupSpawnChanceCurve>k__BackingField:
+      serializedVersion: 2
+      m_Curve:
+      - serializedVersion: 3
+        time: 0
+        value: 0.1
+        inSlope: 0
+        outSlope: 0.7
+        tangentMode: 0
+        weightedMode: 0
+        inWeight: 0
+        outWeight: 0
+      - serializedVersion: 3
+        time: 1
+        value: 0.8
+        inSlope: 0.7
+        outSlope: 0
+        tangentMode: 0
+        weightedMode: 0
+        inWeight: 0
+        outWeight: 0
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+      m_RotationOrder: 4
     <GroupSizeCurve>k__BackingField:
       serializedVersion: 2
       m_Curve:
@@ -56,7 +81,7 @@ MonoBehaviour:
         outWeight: 0
       - serializedVersion: 3
         time: 1
-        value: 25
+        value: 7
         inSlope: 2
         outSlope: 2
         tangentMode: 0
@@ -66,4 +91,7 @@ MonoBehaviour:
       m_PreInfinity: 2
       m_PostInfinity: 2
       m_RotationOrder: 4
-    <MaxGroupSize>k__BackingField: 25
+    <MaxGroupSize>k__BackingField: 7
+    <GroupRadiusPerEnemy>k__BackingField: 0.5
+    <MinGroupRadius>k__BackingField: 1
+    <MaxGroupRadius>k__BackingField: 8

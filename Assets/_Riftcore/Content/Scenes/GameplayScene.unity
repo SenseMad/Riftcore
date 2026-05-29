@@ -857,7 +857,7 @@ GameObject:
   - component: {fileID: 745070834}
   - component: {fileID: 745070833}
   - component: {fileID: 745070832}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Cube (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1615,7 +1615,7 @@ GameObject:
   - component: {fileID: 1434381115}
   - component: {fileID: 1434381114}
   - component: {fileID: 1434381113}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Cube
   m_TagString: Untagged
   m_Icon: {fileID: 0}

@@ -76,7 +76,12 @@ namespace Riftcore.Gameplay.Enemies.Spawning
                 return;
 
             float normalizedTime = Mathf.Clamp01(time / DifficultyGrowTime);
-            float interval = enemySpawnEntry.BaseSpawnInterval * enemySpawnEntry.IntervalMultiplierCurve.Evaluate(normalizedTime);
+            
+            float difficultyMultiplier = _enemySpawnSettings.UseDifficultyForInterval ? GetDifficultyMultiplier() : 1f;
+            float intervalMultiplier = enemySpawnEntry.IntervalMultiplierCurve.Evaluate(normalizedTime);
+            float interval = enemySpawnEntry.BaseSpawnInterval * intervalMultiplier / difficultyMultiplier;
+            interval = Mathf.Max(_enemySpawnSettings.MinSpawnInterval, interval);
+            
             float nextTime = _nextSpawnTime.GetValueOrDefault(enemySpawnEntry, 0f);
             
             if (time < nextTime)
@@ -86,8 +91,10 @@ namespace Riftcore.Gameplay.Enemies.Spawning
                 return;
 
             int groupSize = Mathf.Clamp(Mathf.RoundToInt(enemySpawnEntry.GroupSizeCurve.Evaluate(normalizedTime)), 1, enemySpawnEntry.MaxGroupSize);
+            
+            float groupSpawnChance = enemySpawnEntry.GroupSpawnChanceCurve.Evaluate(normalizedTime);
 
-            bool isSpawnGroup = Random.value <= enemySpawnEntry.GroupSpawnChance;
+            bool isSpawnGroup = Random.value <= groupSpawnChance;
             bool spawned = false;
             if (!isSpawnGroup || groupSize <= 1)
             {
@@ -119,6 +126,14 @@ namespace Riftcore.Gameplay.Enemies.Spawning
             
             if (spawned)
                 _nextSpawnTime[enemySpawnEntry] = time + interval;
+        }
+
+        private float GetDifficultyMultiplier()
+        {
+            if (_player == null)
+                return 1f;
+
+            return 1f + _player.GameStatistics.LevelStatistics.Difficulty / 100f;
         }
         
         private Enemy SpawnEnemyNearPlayer(Enemy enemyPrefab)
@@ -152,7 +167,7 @@ namespace Riftcore.Gameplay.Enemies.Spawning
             
             List<Enemy> spawnedEnemies = new();
             
-            float difficultyMultiplier = 1f + _player.GameStatistics.LevelStatistics.Difficulty / 100f;
+            float difficultyMultiplier = GetDifficultyMultiplier();
             int finalCount = Mathf.Clamp(Mathf.RoundToInt(count * difficultyMultiplier), 1, enemySpawnEntry.MaxGroupSize);
             if (finalCount == 1)
             {

@@ -11,147 +11,30 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="c7c5cf43-a5f2-48bc-88b3-ed9f5d8260d8" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/Assets/_Riftcore/Scripts/Gameplay/Effects/Core/Effect.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/_Riftcore/Scripts/Gameplay/Effects/Core/Effect.cs.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/_Riftcore/Scripts/Gameplay/Enemies/Attacker.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/_Riftcore/Scripts/Gameplay/Enemies/Attacker/EnemyTouchDamage.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/_Riftcore/Scripts/Gameplay/Enemies/Attacker/EnemyTouchDamage.cs.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/_Riftcore/Scripts/Gameplay/HealthSystem.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/_Riftcore/Scripts/Gameplay/HealthSystem/Damageable.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/_Riftcore/Scripts/Gameplay/HealthSystem/Damageable.cs.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/_Riftcore/Scripts/Gameplay/HealthSystem/Health.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/_Riftcore/Scripts/Gameplay/HealthSystem/Health.cs.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/_Riftcore/Scripts/Gameplay/HealthSystem/IDamageable.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/_Riftcore/Scripts/Gameplay/HealthSystem/IDamageable.cs.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/_Riftcore/Scripts/Gameplay/HitFlash.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/_Riftcore/Scripts/Gameplay/HitFlash.cs.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/_Riftcore/Scripts/Gameplay/Inventory/UI.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/_Riftcore/Scripts/Gameplay/Inventory/UI/InventoryCategoryContainer.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/_Riftcore/Scripts/Gameplay/Inventory/UI/InventoryCategoryContainer.cs.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/_Riftcore/Scripts/Gameplay/Inventory/UI/InventorySlot.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/_Riftcore/Scripts/Gameplay/Inventory/UI/InventorySlot.cs.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/_Riftcore/Scripts/Gameplay/Inventory/UI/InventoryUI.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/_Riftcore/Scripts/Gameplay/Inventory/UI/InventoryUI.cs.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/_Riftcore/Scripts/Gameplay/Level/UI.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/_Riftcore/Scripts/Gameplay/Pickups/Core/PickupMagnet.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/_Riftcore/Scripts/Gameplay/Pickups/Core/PickupMagnet.cs.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/_Riftcore/Scripts/Gameplay/Pickups/Runtime/BombPickup.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/_Riftcore/Scripts/Gameplay/Pickups/Runtime/BombPickup.cs.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/_Riftcore/Scripts/Gameplay/Pickups/Runtime/HealthPickup.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/_Riftcore/Scripts/Gameplay/Pickups/Runtime/HealthPickup.cs.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/_Riftcore/Scripts/Gameplay/Pickups/Runtime/ImmortalityPickup.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/_Riftcore/Scripts/Gameplay/Pickups/Runtime/ImmortalityPickup.cs.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/_Riftcore/Scripts/Gameplay/Pickups/Runtime/MagnetPickup.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/_Riftcore/Scripts/Gameplay/Pickups/Runtime/MagnetPickup.cs.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/_Riftcore/Scripts/Gameplay/Players/Effects.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/_Riftcore/Scripts/Gameplay/Players/Effects/HealthRegenerationEffect.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/_Riftcore/Scripts/Gameplay/Players/Effects/HealthRegenerationEffect.cs.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/_Riftcore/Scripts/Gameplay/Players/Effects/ImmortalityEffect.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/_Riftcore/Scripts/Gameplay/Players/Effects/ImmortalityEffect.cs.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/_Riftcore/Scripts/Gameplay/Players/Effects/PlayerEffects.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/_Riftcore/Scripts/Gameplay/Players/Effects/PlayerEffects.cs.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/_Riftcore/Scripts/Gameplay/Players/Effects/SpikesEffect.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/_Riftcore/Scripts/Gameplay/Players/Effects/SpikesEffect.cs.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/_Riftcore/Scripts/Gameplay/Players/Effects/VampirismEffect.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/_Riftcore/Scripts/Gameplay/Players/Effects/VampirismEffect.cs.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/_Riftcore/Scripts/Gameplay/Players/UI.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/_Riftcore/Scripts/Gameplay/Players/UI/PlayerHealthView.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/_Riftcore/Scripts/Gameplay/Players/UI/PlayerHealthView.cs.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/_Riftcore/Scripts/Gameplay/Projectiles/HitHandling/Interfaces/IProjectileTarget.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/_Riftcore/Scripts/Gameplay/Projectiles/HitHandling/Interfaces/IProjectileTarget.cs.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/_Riftcore/Scripts/Gameplay/Skills/Stats/IStatProvider.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/_Riftcore/Scripts/Gameplay/Skills/Stats/IStatProvider.cs.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/_Riftcore/Scripts/Gameplay/Weapons/Runtime/AuraWeapon.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/_Riftcore/Scripts/Gameplay/Weapons/Runtime/AuraWeapon.cs.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/_Riftcore/Scripts/World/Grid/PickupGrid.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/_Riftcore/Scripts/World/Grid/PickupGrid.cs.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.Riftcore/.idea/.gitignore" beforeDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/_Riftcore/Scripts/Gameplay/Enemies/Core/EnemyVisual.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/_Riftcore/Scripts/Gameplay/Enemies/Core/EnemyVisual.cs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/_Riftcore/Scripts/Gameplay/Pickups/Core/PickupDropMotion.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/_Riftcore/Scripts/Gameplay/Pickups/Core/PickupDropMotion.cs.meta" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.Riftcore/.idea/indexLayout.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/_Riftcore/Content/Data/Databases/ItemCategoryDatabase.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Riftcore/Content/Data/Databases/ItemCategoryDatabase.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/_Riftcore/Content/Data/Databases/ItemConfigDatabase.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Riftcore/Content/Data/Databases/ItemConfigDatabase.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/_Riftcore/Content/Data/Databases/RarityDatabase.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Riftcore/Content/Data/Databases/RarityDatabase.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/_Riftcore/Content/Data/Databases/WeaponDatabase.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Riftcore/Content/Data/Databases/WeaponDatabase.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/_Riftcore/Content/Data/Enemy/EnemyData.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Riftcore/Content/Data/Enemy/EnemyData.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/_Riftcore/Content/Data/Items/Rockets.asset" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/_Riftcore/Content/Data/Items/Rockets.asset.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/_Riftcore/Content/Data/Pickup/ExperiencePickupData.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Riftcore/Content/Data/Pickup/ExperiencePickupData.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/_Riftcore/Content/Data/Player/Statistics/PlayerGameStatistics.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Riftcore/Content/Data/Player/Statistics/PlayerGameStatistics.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/_Riftcore/Content/Data/Skills/Armor.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Riftcore/Content/Data/Skills/Armor.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/_Riftcore/Content/Data/Skills/AttackSpeed.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Riftcore/Content/Data/Skills/AttackSpeed.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/_Riftcore/Content/Data/Skills/CollectingRadius.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Riftcore/Content/Data/Skills/CollectingRadius.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/_Riftcore/Content/Data/Skills/CritChance.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Riftcore/Content/Data/Skills/CritChance.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/_Riftcore/Content/Data/Skills/CritDamage.asset" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/_Riftcore/Content/Data/Skills/CritDamage.asset.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/_Riftcore/Content/Data/Skills/Damage.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Riftcore/Content/Data/Skills/Damage.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/_Riftcore/Content/Data/Skills/Difficulty.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Riftcore/Content/Data/Skills/Difficulty.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/_Riftcore/Content/Data/Skills/DodgingChance.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Riftcore/Content/Data/Skills/DodgingChance.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/_Riftcore/Content/Data/Skills/Duration.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Riftcore/Content/Data/Skills/Duration.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/_Riftcore/Content/Data/Skills/JumpHeight.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Riftcore/Content/Data/Skills/JumpHeight.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/_Riftcore/Content/Data/Skills/Luck.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Riftcore/Content/Data/Skills/Luck.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/_Riftcore/Content/Data/Skills/MaxHealth.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Riftcore/Content/Data/Skills/MaxHealth.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/_Riftcore/Content/Data/Skills/MoveSpeed.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Riftcore/Content/Data/Skills/MoveSpeed.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/_Riftcore/Content/Data/Skills/MultiplierExperience.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Riftcore/Content/Data/Skills/MultiplierExperience.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/_Riftcore/Content/Data/Skills/NumberJumps.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Riftcore/Content/Data/Skills/NumberJumps.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/_Riftcore/Content/Data/Skills/ProjectileBounceCount.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Riftcore/Content/Data/Skills/ProjectileBounceCount.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/_Riftcore/Content/Data/Skills/ProjectileCount.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Riftcore/Content/Data/Skills/ProjectileCount.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/_Riftcore/Content/Data/Skills/ProjectileSize.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Riftcore/Content/Data/Skills/ProjectileSize.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/_Riftcore/Content/Data/Skills/ProjectileSpeed.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Riftcore/Content/Data/Skills/ProjectileSpeed.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/_Riftcore/Content/Data/Skills/RegenerationHealth.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Riftcore/Content/Data/Skills/RegenerationHealth.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/_Riftcore/Content/Data/Skills/Shield.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Riftcore/Content/Data/Skills/Shield.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/_Riftcore/Content/Data/Skills/Vampirism.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Riftcore/Content/Data/Skills/Vampirism.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Riftcore/Content/Data/Enemy/Spawn/EnemySpawnSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Riftcore/Content/Data/Enemy/Spawn/EnemySpawnSettings.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Riftcore/Content/Data/Installers/EnemyGlobalSpawnInstallerData.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Riftcore/Content/Data/Installers/EnemyGlobalSpawnInstallerData.asset" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/_Riftcore/Content/Data/Weapons/ProjectileWeaponData.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Riftcore/Content/Data/Weapons/ProjectileWeaponData.asset" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/_Riftcore/Content/Fonts/exo2_0_bold SDF.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Riftcore/Content/Fonts/exo2_0_bold SDF.asset" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/_Riftcore/Content/Prefabs/Enemy/Enemy.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Riftcore/Content/Prefabs/Enemy/Enemy.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/_Riftcore/Content/Prefabs/Player/Player.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Riftcore/Content/Prefabs/Player/Player.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Riftcore/Content/Prefabs/Pickup/ExperiencePickup.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Riftcore/Content/Prefabs/Pickup/ExperiencePickup.prefab" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/_Riftcore/Content/Scenes/GameplayScene.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Riftcore/Content/Scenes/GameplayScene.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/_Riftcore/Scripts/Gameplay/Effects/Core/EffectPool.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Riftcore/Scripts/Gameplay/Effects/Core/EffectPool.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/_Riftcore/Scripts/Gameplay/Effects/Core/HitEffect.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/_Riftcore/Scripts/Gameplay/Effects/Core/HitEffect.cs.meta" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/_Riftcore/Scripts/Gameplay/Enemies/Core/Enemy.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Riftcore/Scripts/Gameplay/Enemies/Core/Enemy.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/_Riftcore/Scripts/Gameplay/Enemies/Core/EnemyManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Riftcore/Scripts/Gameplay/Enemies/Core/EnemyManager.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Riftcore/Scripts/Gameplay/Enemies/Core/EnemyMovement.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Riftcore/Scripts/Gameplay/Enemies/Core/EnemyMovement.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Riftcore/Scripts/Gameplay/Enemies/Core/EnemyPickupDropper.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Riftcore/Scripts/Gameplay/Enemies/Core/EnemyPickupDropper.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/_Riftcore/Scripts/Gameplay/Enemies/Data/EnemyData.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Riftcore/Scripts/Gameplay/Enemies/Data/EnemyData.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Riftcore/Scripts/Gameplay/Enemies/Data/EnemySpawnSettings.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Riftcore/Scripts/Gameplay/Enemies/Data/EnemySpawnSettings.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Riftcore/Scripts/Gameplay/Enemies/Installers/EnemyGlobalSpawnInstallerData.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Riftcore/Scripts/Gameplay/Enemies/Installers/EnemyGlobalSpawnInstallerData.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/_Riftcore/Scripts/Gameplay/Enemies/Spawning/EnemySpawnEntry.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Riftcore/Scripts/Gameplay/Enemies/Spawning/EnemySpawnEntry.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/_Riftcore/Scripts/Gameplay/Enemies/Spawning/EnemySpawnManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Riftcore/Scripts/Gameplay/Enemies/Spawning/EnemySpawnManager.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/_Riftcore/Scripts/Gameplay/Experience/Core/ExperienceService.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Riftcore/Scripts/Gameplay/Experience/Core/ExperienceService.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/_Riftcore/Scripts/Gameplay/Experience/UI/ExperienceUI.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Riftcore/Scripts/Gameplay/Experience/UI/ExperienceUI.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/_Riftcore/Scripts/Gameplay/Inventory/Core/InventoryItem.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Riftcore/Scripts/Gameplay/Inventory/Core/InventoryItem.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/_Riftcore/Scripts/Gameplay/Inventory/Data/ItemCategory.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Riftcore/Scripts/Gameplay/Inventory/Data/ItemCategory.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/_Riftcore/Scripts/Gameplay/Level/LevelManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Riftcore/Scripts/Gameplay/Level/LevelManager.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/_Riftcore/Scripts/Gameplay/Pickups/Core/BasePickup.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Riftcore/Scripts/Gameplay/Pickups/Core/BasePickup.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/_Riftcore/Scripts/Gameplay/Pickups/Core/PickupManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Riftcore/Scripts/Gameplay/Pickups/Core/PickupManager.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/_Riftcore/Scripts/Gameplay/Pickups/Data/PickupData.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Riftcore/Scripts/Gameplay/Pickups/Data/PickupData.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/_Riftcore/Scripts/Gameplay/Pickups/Installers/PickupInstaller.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Riftcore/Scripts/Gameplay/Pickups/Installers/PickupInstaller.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/_Riftcore/Scripts/Gameplay/Pickups/Runtime/ExperiencePickup.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Riftcore/Scripts/Gameplay/Pickups/Runtime/ExperiencePickup.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/_Riftcore/Scripts/Gameplay/Players/Combat/PlayerWeaponController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Riftcore/Scripts/Gameplay/Players/Combat/PlayerWeaponController.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/_Riftcore/Scripts/Gameplay/Players/Core/Player.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Riftcore/Scripts/Gameplay/Players/Core/Player.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/_Riftcore/Scripts/Gameplay/Players/Movement/PlayerMovementController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Riftcore/Scripts/Gameplay/Players/Movement/PlayerMovementController.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/_Riftcore/Scripts/Gameplay/Projectiles/Core/Projectile.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Riftcore/Scripts/Gameplay/Projectiles/Core/Projectile.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/_Riftcore/Scripts/Gameplay/Projectiles/HitHandling/Implementations/BounceHitHandler.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Riftcore/Scripts/Gameplay/Projectiles/HitHandling/Implementations/BounceHitHandler.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/_Riftcore/Scripts/Gameplay/Projectiles/HitHandling/Implementations/SingleHitHandler.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Riftcore/Scripts/Gameplay/Projectiles/HitHandling/Implementations/SingleHitHandler.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/_Riftcore/Scripts/Gameplay/Projectiles/HitHandling/Interfaces/IProjectileHitHandler.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Riftcore/Scripts/Gameplay/Projectiles/HitHandling/Interfaces/IProjectileHitHandler.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/_Riftcore/Scripts/Gameplay/Skills/Data/RarityDatabase.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Riftcore/Scripts/Gameplay/Skills/Data/RarityDatabase.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/_Riftcore/Scripts/Gameplay/Skills/Data/SkillData.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Riftcore/Scripts/Gameplay/Skills/Data/SkillData.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/_Riftcore/Scripts/Gameplay/Skills/Data/SkillRarity.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Riftcore/Scripts/Gameplay/Skills/Data/SkillRarity.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/_Riftcore/Scripts/Gameplay/Skills/Runtime/SkillDropSystem.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Riftcore/Scripts/Gameplay/Skills/Runtime/SkillDropSystem.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/_Riftcore/Scripts/Gameplay/Skills/Runtime/SkillRewardApplier.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Riftcore/Scripts/Gameplay/Skills/Runtime/SkillRewardApplier.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/_Riftcore/Scripts/Gameplay/Skills/Runtime/SkillSelectionService.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Riftcore/Scripts/Gameplay/Skills/Runtime/SkillSelectionService.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/_Riftcore/Scripts/Gameplay/Skills/Stats/StatModifierData.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Riftcore/Scripts/Gameplay/Skills/Stats/StatModifierData.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/_Riftcore/Scripts/Gameplay/Skills/Stats/StatValueProvider.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Riftcore/Scripts/Gameplay/Skills/Stats/StatValueProvider.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/_Riftcore/Scripts/Gameplay/Skills/UI/SkillRewardButton.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Riftcore/Scripts/Gameplay/Skills/UI/SkillRewardButton.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/_Riftcore/Scripts/Gameplay/Stats/CombatStatistics.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Riftcore/Scripts/Gameplay/Stats/CombatStatistics.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/_Riftcore/Scripts/Gameplay/Stats/GameStatistics.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Riftcore/Scripts/Gameplay/Stats/GameStatistics.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/_Riftcore/Scripts/Gameplay/Stats/LevelStatistics.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Riftcore/Scripts/Gameplay/Stats/LevelStatistics.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/_Riftcore/Scripts/Gameplay/Stats/MovementStatistics.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Riftcore/Scripts/Gameplay/Stats/MovementStatistics.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/_Riftcore/Scripts/Gameplay/Stats/ProjectileStatistics.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Riftcore/Scripts/Gameplay/Stats/ProjectileStatistics.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/_Riftcore/Scripts/Gameplay/Weapons/Data/WeaponData.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Riftcore/Scripts/Gameplay/Weapons/Data/WeaponData.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/_Riftcore/Scripts/Gameplay/Weapons/Factories/WeaponFactory.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Riftcore/Scripts/Gameplay/Weapons/Factories/WeaponFactory.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/_Riftcore/Scripts/Gameplay/Weapons/Runtime/ProjectileWeapon.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Riftcore/Scripts/Gameplay/Weapons/Runtime/ProjectileWeapon.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/_Riftcore/Scripts/Gameplay/Weapons/Runtime/Weapon.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Riftcore/Scripts/Gameplay/Weapons/Runtime/Weapon.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/_Riftcore/Scripts/Gameplay/Weapons/Runtime/WeaponBase.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Riftcore/Scripts/Gameplay/Weapons/Runtime/WeaponBase.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/_Riftcore/Scripts/World/Grid/EnemyGrid.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Riftcore/Scripts/World/Grid/EnemyGrid.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Packages/manifest.json" beforeDir="false" afterPath="$PROJECT_DIR$/Packages/manifest.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Packages/packages-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/Packages/packages-lock.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ProjectSettings/ProjectSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/ProjectSettings.asset" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -163,10 +46,12 @@
   </component>
   <component name="HighlightingSettingsPerFile">
     <setting file="file://$PROJECT_DIR$/Assets/_Riftcore/Scripts/Gameplay/Effects/Core/Effect.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/_Riftcore/Scripts/Gameplay/Enemies/Core/EnemyVisual.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/_Riftcore/Scripts/Gameplay/HitFlash.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/_Riftcore/Scripts/Gameplay/Inventory/UI/InventoryCategoryContainer.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/_Riftcore/Scripts/Gameplay/Inventory/UI/InventorySlot.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/_Riftcore/Scripts/Gameplay/Inventory/UI/InventoryUI.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/_Riftcore/Scripts/Gameplay/Pickups/Core/PickupDropMotion.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/_Riftcore/Scripts/Gameplay/Pickups/Core/PickupMagnet.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/_Riftcore/Scripts/Gameplay/Pickups/Runtime/BombPickup.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/_Riftcore/Scripts/Gameplay/Pickups/Runtime/HealthPickup.cs" root0="FORCE_HIGHLIGHTING" />
@@ -265,6 +150,7 @@
       <workItem from="1779863113986" duration="16839000" />
       <workItem from="1779895729952" duration="11715000" />
       <workItem from="1779950288173" duration="17344000" />
+      <workItem from="1780036827237" duration="13274000" />
     </task>
     <servers />
   </component>

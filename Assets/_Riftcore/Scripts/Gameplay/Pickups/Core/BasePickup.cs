@@ -23,6 +23,13 @@ namespace Riftcore.Gameplay.Pickups.Core
         
         private bool _isPickedUp;
         
+        public Collider Collider { get; private set; } // pickup.Collider.bounds.extents.y
+
+        private void Awake()
+        {
+            Collider = GetComponent<Collider>();
+        }
+
         public void Tick(float deltaTime)
         {
             if (!_isAttracting || _target == null)

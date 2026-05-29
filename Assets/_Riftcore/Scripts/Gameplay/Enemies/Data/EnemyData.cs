@@ -13,6 +13,7 @@ namespace Riftcore.Gameplay.Enemies.Data
         [field: Header("Movement")]
         [field: SerializeField, Min(0)] public float SpeedWalking { get; private set; }
         [field: SerializeField, Min(0)] public float Acceleration { get; private set; }
+        [field: SerializeField, Min(0f)] public float RotationSpeed { get; private set; } = 720f;
         /*[field: SerializeField, Min(0)] public float GroundCheckDistance { get; private set; }
         [field: SerializeField] public LayerMask GroundLayerMask { get; private set; }*/
         
@@ -22,6 +23,12 @@ namespace Riftcore.Gameplay.Enemies.Data
         [field: SerializeField, Min(0)] public float Damage { get; private set; }
         [field: SerializeField, Min(0)] public float TouchDamage { get; private set; }
         [field: SerializeField, Min(0)] public float TouchDamageInterval { get; private set; }
+        
+        [field: Header("Climbing")]
+        [field: SerializeField, Min(0)] public float ClimbSpeed { get; private set; } = 4f;
+        [field: SerializeField, Min(0)] public float ClimbHorizontalMultiplier { get; private set; } = 0.2f;
+        [field: SerializeField, Min(0)] public float WallCheckDistance { get; private set; } = 0.8f;
+        [field: SerializeField, Min(0)] public float WallCheckRadius { get; private set; } = 0.35f;
         
         [field: Header("Health")]
         [field: SerializeField, Min(0)] public int MaxHealth { get; private set; }
