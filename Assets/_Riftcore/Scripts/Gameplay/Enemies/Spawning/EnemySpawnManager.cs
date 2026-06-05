@@ -14,21 +14,20 @@ namespace Riftcore.Gameplay.Enemies.Spawning
     public sealed class EnemySpawnManager : MonoBehaviour
     {
         [Inject] private readonly GameContext _gameContext;
+        [Inject] private readonly GameplayLockService _gameplayLockService;
+        
         [Inject] private readonly EnemyManager _enemyManager;
         [Inject] private readonly EnemySpawner _enemySpawner;
         [Inject] private readonly EnemySpawnPointFinder _enemySpawnPointFinder;
         [Inject] private readonly EnemySpawnSettings _enemySpawnSettings;
-        [Inject] private readonly GameplayLockService _gameplayLockService;
-
-        private Player _player;
-
+        
         private const float DifficultyGrowTime = 600f;
         
-        private float _elapsedTime;
-        
-        private bool _playerReady;
-
         private readonly Dictionary<EnemySpawnEntry, float> _nextSpawnTime = new();
+
+        private Player _player;
+        private float _elapsedTime;
+        private bool _playerReady;
 
         private void Awake()
         {

@@ -12,7 +12,7 @@ namespace Riftcore.Gameplay
         [SerializeField] private bool _enabled;
         [SerializeField] private Color _flashColor = Color.white;
         [SerializeField, Min(0)] private int _flashCount = 3;
-        [SerializeField] private float _totalDuration = 0.2f;
+        [SerializeField, Min(0)] private float _totalDuration = 0.2f;
         
         private Renderer[] _renderers;
         private Material[] _materials;

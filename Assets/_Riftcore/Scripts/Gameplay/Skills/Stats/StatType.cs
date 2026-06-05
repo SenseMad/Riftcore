@@ -15,6 +15,10 @@ namespace Riftcore.Gameplay.Skills.Stats
         ProjectilePenetration, //
         Duration,
         
+        OrbitObjectCount,
+        OrbitRadius,
+        OrbitRotationSpeed,
+        
         MaxHealth,
         RegenerationHealth,
         Armor,

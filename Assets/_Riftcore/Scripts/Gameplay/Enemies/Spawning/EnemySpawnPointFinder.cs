@@ -6,12 +6,9 @@ namespace Riftcore.Gameplay.Enemies.Spawning
 {
     public sealed class EnemySpawnPointFinder
     {
-        //private readonly GameContext _gameContext;
         private Player _player;
         
         private readonly EnemyGlobalSpawnInstallerData _enemyGlobalSpawnInstallerData;
-        
-        //private Player Player => _gameContext.Player;
 
         public EnemySpawnPointFinder(EnemyGlobalSpawnInstallerData enemyGlobalSpawnInstallerData)
         {

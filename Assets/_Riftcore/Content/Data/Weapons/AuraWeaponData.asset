@@ -9,9 +9,9 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 9f2be4d789834d6a8a0adc1a57b74650, type: 3}
+  m_Script: {fileID: 11500000, guid: eb6c3e248e44494e873eed79f3b66072, type: 3}
   m_Name: AuraWeaponData
-  m_EditorClassIdentifier: Riftcore::Riftcore.Gameplay.Weapons.Data.WeaponData
+  m_EditorClassIdentifier: Riftcore::Riftcore.Gameplay.Weapons.Data.AuraWeaponData
   <ItemData>k__BackingField: {fileID: 11400000, guid: 27c4630b980e86c4f9734412e4f886af, type: 2}
   <AttackRange>k__BackingField: 5
   <AttackPerMinutes>k__BackingField: 60
@@ -20,3 +20,4 @@ MonoBehaviour:
     <AttackSpeed>k__BackingField: 1
     <CritChance>k__BackingField: 0
     <CritMultiplier>k__BackingField: 0
+  <EffectPrefab>k__BackingField: {fileID: 0}

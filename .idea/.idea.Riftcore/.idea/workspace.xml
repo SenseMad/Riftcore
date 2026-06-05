@@ -11,30 +11,42 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="c7c5cf43-a5f2-48bc-88b3-ed9f5d8260d8" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/Assets/_Riftcore/Scripts/Gameplay/Enemies/Core/EnemyVisual.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/_Riftcore/Scripts/Gameplay/Enemies/Core/EnemyVisual.cs.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/_Riftcore/Scripts/Gameplay/Pickups/Core/PickupDropMotion.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/_Riftcore/Scripts/Gameplay/Pickups/Core/PickupDropMotion.cs.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.Riftcore/.idea/indexLayout.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/_Riftcore/Content/Data/Enemy/Spawn/EnemySpawnSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Riftcore/Content/Data/Enemy/Spawn/EnemySpawnSettings.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/_Riftcore/Content/Data/Installers/EnemyGlobalSpawnInstallerData.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Riftcore/Content/Data/Installers/EnemyGlobalSpawnInstallerData.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/_Riftcore/Content/Data/Weapons/ProjectileWeaponData.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Riftcore/Content/Data/Weapons/ProjectileWeaponData.asset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/_Riftcore/Scripts/Gameplay/Level/GameRunStatistics.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/_Riftcore/Scripts/Gameplay/Level/GameRunStatistics.cs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/_Riftcore/Scripts/Gameplay/Level/Installers.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/_Riftcore/Scripts/Gameplay/Level/Installers/LevelInstaller.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/_Riftcore/Scripts/Gameplay/Level/Installers/LevelInstaller.cs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/_Riftcore/Scripts/Gameplay/Orbits.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/_Riftcore/Scripts/Gameplay/Orbits/OrbitObject.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/_Riftcore/Scripts/Gameplay/Orbits/OrbitObject.cs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/_Riftcore/Scripts/Gameplay/Stats/OrbitStatistics.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/_Riftcore/Scripts/Gameplay/Stats/OrbitStatistics.cs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/_Riftcore/Scripts/Gameplay/Weapons/Data/AuraWeaponData.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/_Riftcore/Scripts/Gameplay/Weapons/Data/AuraWeaponData.cs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/_Riftcore/Scripts/Gameplay/Weapons/Data/OrbitWeaponData.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/_Riftcore/Scripts/Gameplay/Weapons/Data/OrbitWeaponData.cs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/_Riftcore/Scripts/Gameplay/Weapons/Runtime/OrbitWeapon.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/_Riftcore/Scripts/Gameplay/Weapons/Runtime/OrbitWeapon.cs.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.Riftcore/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Riftcore/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Riftcore/Content/Data/Databases/ItemConfigDatabase.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Riftcore/Content/Data/Databases/ItemConfigDatabase.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Riftcore/Content/Data/Databases/WeaponDatabase.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Riftcore/Content/Data/Databases/WeaponDatabase.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Riftcore/Content/Data/Weapons/AuraWeaponData.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Riftcore/Content/Data/Weapons/AuraWeaponData.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Riftcore/Content/Data/Weapons/AuraWeaponData.asset.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Riftcore/Content/Data/Weapons/AuraWeaponData.asset.meta" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/_Riftcore/Content/Fonts/exo2_0_bold SDF.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Riftcore/Content/Fonts/exo2_0_bold SDF.asset" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/_Riftcore/Content/Prefabs/Enemy/Enemy.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Riftcore/Content/Prefabs/Enemy/Enemy.prefab" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/_Riftcore/Content/Prefabs/Pickup/ExperiencePickup.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Riftcore/Content/Prefabs/Pickup/ExperiencePickup.prefab" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/_Riftcore/Content/Scenes/GameplayScene.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Riftcore/Content/Scenes/GameplayScene.unity" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/_Riftcore/Scripts/Gameplay/Enemies/Core/Enemy.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Riftcore/Scripts/Gameplay/Enemies/Core/Enemy.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/_Riftcore/Scripts/Gameplay/Enemies/Core/EnemyManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Riftcore/Scripts/Gameplay/Enemies/Core/EnemyManager.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/_Riftcore/Scripts/Gameplay/Enemies/Core/EnemyMovement.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Riftcore/Scripts/Gameplay/Enemies/Core/EnemyMovement.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/_Riftcore/Scripts/Gameplay/Enemies/Core/EnemyPickupDropper.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Riftcore/Scripts/Gameplay/Enemies/Core/EnemyPickupDropper.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/_Riftcore/Scripts/Gameplay/Enemies/Data/EnemyData.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Riftcore/Scripts/Gameplay/Enemies/Data/EnemyData.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/_Riftcore/Scripts/Gameplay/Enemies/Data/EnemySpawnSettings.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Riftcore/Scripts/Gameplay/Enemies/Data/EnemySpawnSettings.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/_Riftcore/Scripts/Gameplay/Enemies/Installers/EnemyGlobalSpawnInstallerData.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Riftcore/Scripts/Gameplay/Enemies/Installers/EnemyGlobalSpawnInstallerData.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/_Riftcore/Scripts/Gameplay/Enemies/Spawning/EnemySpawnEntry.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Riftcore/Scripts/Gameplay/Enemies/Spawning/EnemySpawnEntry.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Riftcore/Scripts/Gameplay/Enemies/Core/EnemyVisual.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Riftcore/Scripts/Gameplay/Enemies/Core/EnemyVisual.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/_Riftcore/Scripts/Gameplay/Enemies/Spawning/EnemySpawnManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Riftcore/Scripts/Gameplay/Enemies/Spawning/EnemySpawnManager.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/_Riftcore/Scripts/Gameplay/Pickups/Core/BasePickup.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Riftcore/Scripts/Gameplay/Pickups/Core/BasePickup.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/_Riftcore/Scripts/Gameplay/Skills/Runtime/SkillSelectionService.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Riftcore/Scripts/Gameplay/Skills/Runtime/SkillSelectionService.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Riftcore/Scripts/Gameplay/Enemies/Spawning/EnemySpawnPointFinder.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Riftcore/Scripts/Gameplay/Enemies/Spawning/EnemySpawnPointFinder.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Riftcore/Scripts/Gameplay/HitFlash.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Riftcore/Scripts/Gameplay/HitFlash.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Riftcore/Scripts/Gameplay/Pickups/Core/PickupDropMotion.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Riftcore/Scripts/Gameplay/Pickups/Core/PickupDropMotion.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Riftcore/Scripts/Gameplay/Skills/Stats/StatType.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Riftcore/Scripts/Gameplay/Skills/Stats/StatType.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/_Riftcore/Scripts/Gameplay/Weapons/Factories/WeaponFactory.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Riftcore/Scripts/Gameplay/Weapons/Factories/WeaponFactory.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Riftcore/Scripts/Gameplay/Weapons/Runtime/AuraWeapon.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Riftcore/Scripts/Gameplay/Weapons/Runtime/AuraWeapon.cs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -51,7 +63,9 @@
     <setting file="file://$PROJECT_DIR$/Assets/_Riftcore/Scripts/Gameplay/Inventory/UI/InventoryCategoryContainer.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/_Riftcore/Scripts/Gameplay/Inventory/UI/InventorySlot.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/_Riftcore/Scripts/Gameplay/Inventory/UI/InventoryUI.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/_Riftcore/Scripts/Gameplay/Pickups/Core/PickupDropMotion.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/_Riftcore/Scripts/Gameplay/Level/GameRunStatistics.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/_Riftcore/Scripts/Gameplay/Level/Installers/LevelInstaller.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/_Riftcore/Scripts/Gameplay/Orbits/OrbitObject.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/_Riftcore/Scripts/Gameplay/Pickups/Core/PickupMagnet.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/_Riftcore/Scripts/Gameplay/Pickups/Runtime/BombPickup.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/_Riftcore/Scripts/Gameplay/Pickups/Runtime/HealthPickup.cs" root0="FORCE_HIGHLIGHTING" />
@@ -63,7 +77,11 @@
     <setting file="file://$PROJECT_DIR$/Assets/_Riftcore/Scripts/Gameplay/Players/UI/PlayerHealthView.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/_Riftcore/Scripts/Gameplay/Projectiles/HitHandling/Interfaces/IProjectileTarget.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/_Riftcore/Scripts/Gameplay/Skills/Stats/IStatProvider.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/_Riftcore/Scripts/Gameplay/Stats/OrbitStatistics.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/_Riftcore/Scripts/Gameplay/Weapons/Data/AuraWeaponData.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/_Riftcore/Scripts/Gameplay/Weapons/Data/OrbitWeaponData.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/_Riftcore/Scripts/Gameplay/Weapons/Runtime/AuraWeapon.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/_Riftcore/Scripts/Gameplay/Weapons/Runtime/OrbitWeapon.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/_Riftcore/Scripts/World/Grid/PickupGrid.cs" root0="FORCE_HIGHLIGHTING" />
   </component>
   <component name="MetaFilesCheckinStateConfiguration" checkMetaFiles="true" />
@@ -79,26 +97,27 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;ModuleVcsDetector.initialDetectionPerformed&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.cidr.known.project.marker&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.readMode.enableVisualFormatting&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.typescript.service.memoryLimit.init&quot;: &quot;true&quot;,
-    &quot;cidr.known.project.marker&quot;: &quot;true&quot;,
-    &quot;codeWithMe.voiceChat.enabledByDefault&quot;: &quot;false&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
-    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
-    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
-    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
-    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
-    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;CodeLensConfigurable&quot;,
-    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "ModuleVcsDetector.initialDetectionPerformed": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "RunOnceActivity.cidr.known.project.marker": "true",
+    "RunOnceActivity.git.unshallow": "true",
+    "RunOnceActivity.readMode.enableVisualFormatting": "true",
+    "RunOnceActivity.typescript.service.memoryLimit.init": "true",
+    "cidr.known.project.marker": "true",
+    "codeWithMe.voiceChat.enabledByDefault": "false",
+    "git-widget-placeholder": "main",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "settings.editor.selected.configurable": "CodeLensConfigurable",
+    "unity.profiler.toolWindow.autoShown": "true",
+    "vue.rearranger.settings.migration": "true"
   }
-}</component>
+}]]></component>
   <component name="RunManager" selected="Attach to Unity Editor.Attach to Unity Editor">
     <configuration name="Start Unity" type="RunUnityExe" factoryName="Unity Executable">
       <option name="EXE_PATH" value="C:\Program Files\Unity\Hub\Editor\6000.3.9f1\Editor\Unity.exe" />
@@ -151,6 +170,8 @@
       <workItem from="1779895729952" duration="11715000" />
       <workItem from="1779950288173" duration="17344000" />
       <workItem from="1780036827237" duration="13274000" />
+      <workItem from="1780397083486" duration="5058000" />
+      <workItem from="1780660269253" duration="14427000" />
     </task>
     <servers />
   </component>

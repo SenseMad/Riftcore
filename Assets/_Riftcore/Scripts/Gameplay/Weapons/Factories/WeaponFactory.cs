@@ -3,12 +3,14 @@ using Riftcore.Gameplay.Projectiles.Core;
 using Riftcore.Gameplay.Weapons.Data;
 using Riftcore.Gameplay.Weapons.Runtime;
 using Riftcore.World.Grid;
+using UnityEngine;
 using Zenject;
 
 namespace Riftcore.Gameplay.Weapons.Factories
 {
     public sealed class WeaponFactory
     {
+        [Inject] private readonly DiContainer _container;
         [Inject] private readonly ProjectileManager _projectileManager;
         [Inject] private readonly ProjectilePool _projectilePool;
         [Inject] private readonly EnemyGrid _enemyGrid;
@@ -18,7 +20,8 @@ namespace Riftcore.Gameplay.Weapons.Factories
             return weaponData switch
             {
                 ProjectileWeaponData projectileWeaponData => new ProjectileWeapon(projectileWeaponData, player, _projectileManager, _projectilePool, _enemyGrid),
-                WeaponData auraWeaponData => new AuraWeapon(auraWeaponData, player, _enemyGrid),
+                AuraWeaponData auraWeaponData => new AuraWeapon(auraWeaponData, player, _enemyGrid),
+                OrbitWeaponData orbitWeaponData => new OrbitWeapon(orbitWeaponData, player, _enemyGrid, _container),
                 
                 _ => null
             };

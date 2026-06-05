@@ -75,7 +75,9 @@ namespace Riftcore.Gameplay.Enemies.Core
         public void SetPaused(bool isPaused)
         {
             _rigidbody.isKinematic = isPaused;
-            Animator.enabled = !isPaused;
+            
+            /*if (Animator != null)
+                Animator.enabled = !isPaused;*/
         }
         
         public void OnGetFromPool()

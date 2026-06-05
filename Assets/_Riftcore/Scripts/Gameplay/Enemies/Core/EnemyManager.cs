@@ -1,6 +1,7 @@
 using System.Collections.Generic;
 using Riftcore.Core.GameState;
 using Riftcore.Gameplay.Enemies.Spawning;
+using Riftcore.Gameplay.Level;
 using Riftcore.World.Grid;
 using UnityEngine;
 using Zenject;
@@ -13,6 +14,7 @@ namespace Riftcore.Gameplay.Enemies.Core
         [Inject] private readonly EnemySpawner _enemySpawner;
         [Inject] private readonly EnemyPickupDropper _enemyPickupDropper;
         [Inject] private readonly GameplayLockService _gameplayLockService;
+        [Inject] private readonly GameRunStatistics _gameRunStatistics;
 
         private const float UpdateTime = 0.1f;
         private float _time;
@@ -80,9 +82,9 @@ namespace Riftcore.Gameplay.Enemies.Core
         private void OnEnemyDie(Enemy enemy)
         {
             _enemyPickupDropper.DropFromEnemy(enemy);
+            _gameRunStatistics.KillEnemyCount++;
 
             Unregister(enemy);
-            //_enemySpawner.Despawn(enemy);
             
             enemy.PlayDeathAnimation(() =>
             {
